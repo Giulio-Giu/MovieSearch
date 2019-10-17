@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.MainActivity"
+        android:background="@color/white">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp">
+
+        <ImageView
+                android:id="@+id/iv_main_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/omdb_icon"
+                android:layout_centerHorizontal="true"/>
+
+        <Button
+                android:id="@+id/main_btn_doSignIn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/iv_main_logo"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/btn_doSignIn"
+                android:textSize="25sp"/>
+
+        <Button
+                android:id="@+id/main_btn_doSignUp"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/main_btn_doSignIn"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_blue"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/btn_doSignUp"
+                android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

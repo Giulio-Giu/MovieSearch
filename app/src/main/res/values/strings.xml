@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Trabalho OMDB</string>
+
+    <!-- MainActivity e activity_main -->
+    <string name="btn_doSignIn">Fazer Login</string>
+    <string name="btn_doSignUp">Realiar Cadastro</string>
+
+    <!-- LoginActivity e activity_login -->
+    <string name="btn_signIn">Entrar</string>
+
+    <!-- RegisterActivity e activity_register -->
+    <string name="confirmPassword">Confirmar Senha</string>
+    <string name="btn_signUp">Cadastrar</string>
+
+    <!-- activity_register e activity_login -->
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="btn_cancel">Cancelar</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.MainActivity"
+        android:background="@color/white">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp">
+
+        <ImageView
+                android:id="@+id/iv_register_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/omdb_icon"
+                android:layout_centerHorizontal="true"/>
+
+        <EditText
+                android:id="@+id/et_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:layout_below="@id/iv_register_logo"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+        <EditText
+                android:id="@+id/et_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textVisiblePassword"
+                android:layout_below="@id/et_register_email"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+
+        <EditText
+                android:id="@+id/et_register_confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirmPassword"
+                android:inputType="textVisiblePassword"
+                android:layout_below="@id/et_register_password"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+
+        <Button
+                android:id="@+id/register_btn_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/et_register_confirmPassword"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/btn_signUp"
+                android:textSize="25sp"/>
+
+        <Button
+                android:id="@+id/register_btn_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/register_btn_signIn"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_red"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="@string/btn_cancel"
+                android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
