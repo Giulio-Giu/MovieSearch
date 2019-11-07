@@ -5,15 +5,18 @@
     <string name="btn_doSignIn">Fazer Login</string>
     <string name="btn_doSignUp">Realiar Cadastro</string>
 
-    <!-- LoginActivity e activity_login -->
+    <!-- SignInActivity e activity_sign_in -->
     <string name="btn_signIn">Entrar</string>
 
-    <!-- RegisterActivity e activity_register -->
+    <!-- SignUpActivity e activity_sign_up -->
     <string name="confirmPassword">Confirmar Senha</string>
     <string name="btn_signUp">Cadastrar</string>
 
-    <!-- activity_register e activity_login -->
+    <!-- activity_sign_up e activity_sign_in -->
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
     <string name="btn_cancel">Cancelar</string>
+
+    <!-- fragment_search -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
