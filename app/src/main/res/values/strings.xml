@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trabalho OMDB</string>
+    <string name="app_name">OMDB Api</string>
 
     <!-- MainActivity e activity_main -->
     <string name="btn_doSignIn">Fazer Login</string>
