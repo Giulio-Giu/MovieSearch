@@ -11,7 +11,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:focusableInTouchMode="true">
 
         <EditText
                 android:id="@+id/et_signUp_name"
@@ -41,7 +42,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/robotoregular"
                 android:hint="@string/password"
-                android:inputType="textVisiblePassword"
+                android:inputType="textPassword"
                 android:textSize="15sp" />
 
         <EditText
@@ -52,11 +53,25 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/robotoregular"
                 android:hint="@string/confirmPassword"
-                android:inputType="textVisiblePassword"
+                android:inputType="textPassword"
                 android:textSize="15sp" />
 
+        <TextView
+                android:id="@+id/tv_signUp_message_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_signUp_confirmPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/error_data"
+                android:textColor="@color/dark_red"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+
         <Button
-                android:id="@+id/signUp_btn_signIn"
+                android:id="@+id/signUp_btn_signUp"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_below="@id/et_signUp_confirmPassword"
@@ -68,11 +83,11 @@
                 android:textSize="15sp" />
 
         <Button
-                android:id="@+id/signUp_btn_signUp"
+                android:id="@+id/signUp_btn_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_below="@id/signUp_btn_signIn"
-                android:layout_marginTop="20dp"
+                android:layout_below="@id/signUp_btn_signUp"
+                android:layout_marginTop="29dp"
                 android:background="@drawable/button_red"
                 android:text="@string/btn_cancel"
                 android:textAllCaps="false"

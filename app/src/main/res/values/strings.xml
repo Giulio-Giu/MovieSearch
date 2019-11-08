@@ -7,10 +7,13 @@
 
     <!-- SignInActivity e activity_sign_in -->
     <string name="btn_signIn">Entrar</string>
+    <string name="wrong_credentials">Usuário ou senha Incorretos!</string>
 
     <!-- SignUpActivity e activity_sign_up -->
     <string name="confirmPassword">Confirmar Senha</string>
     <string name="btn_signUp">Cadastrar</string>
+    <string name="error_passwords">As senhas não são iguais!</string>
+    <string name="error_data">Dados inválidos!</string>
 
     <!-- activity_sign_up e activity_sign_in -->
     <string name="name">Nome</string>

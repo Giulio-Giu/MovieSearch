@@ -11,7 +11,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:focusableInTouchMode="true">
 
         <ImageView
                 android:id="@+id/iv_signIn_logo"
@@ -29,8 +30,8 @@
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/robotomedium"
                 android:text="@string/title"
-                android:textSize="22sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp" />
 
         <EditText
                 android:id="@+id/et_signIn_email"
@@ -38,10 +39,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_signIn_title"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/robotoregular"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:textSize="15sp"
-                android:fontFamily="@font/robotoregular"/>
+                android:textSize="15sp" />
 
         <EditText
                 android:id="@+id/et_signIn_password"
@@ -49,10 +50,24 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/et_signIn_email"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/robotoregular"
                 android:hint="@string/password"
-                android:inputType="textVisiblePassword"
-                android:textSize="15sp"
-                android:fontFamily="@font/robotoregular"/>
+                android:inputType="textPassword"
+                android:textSize="15sp" />
+
+        <TextView
+                android:id="@+id/tv_signIn_wrong_credentials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_signIn_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/wrong_credentials"
+                android:textColor="@color/dark_red"
+                android:textSize="16sp"
+                android:visibility="invisible" />
 
         <Button
                 android:id="@+id/signIn_btn_signIn"
@@ -61,8 +76,8 @@
                 android:layout_below="@id/et_signIn_password"
                 android:layout_marginTop="60dp"
                 android:background="@drawable/button_green"
-                android:text="@string/btn_signIn"
                 android:fontFamily="@font/robotoregular"
+                android:text="@string/btn_signIn"
                 android:textAllCaps="false"
                 android:textColor="@color/textGrayUltraLight"
                 android:textSize="15sp" />
