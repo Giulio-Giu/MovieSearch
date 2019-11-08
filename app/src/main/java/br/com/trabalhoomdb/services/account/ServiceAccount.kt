@@ -1,17 +1,16 @@
 package br.com.trabalhoomdb.services.account
 
-import br.com.trabalhoomdb.models.omdb.ResponseEpisodes
-import br.com.trabalhoomdb.models.omdb.Serie
+import br.com.trabalhoomdb.models.account.Account
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 interface ServiceAccount {
 
-    @GET("default.aspx")
-    fun signIn(@Query("t") t: String, @Query("apikey") apikey: String): Call<Serie>
+    @POST("account/auth")
+    fun auth(@Body account: Account): Call<Account>
 
-    @GET("default.aspx")
-    fun signUp(@Query("t") t: String, @Query("Season") season: String, @Query("apikey") apikey: String): Call<ResponseEpisodes>
+    @POST("account")
+    fun insert(@Body account: Account): Call<Account>
 
 }

@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class RetrofitInitializerOmdb {
+class RetrofitInitializerAccount {
 
     companion object {
         private val okHttpClient: OkHttpClient by lazy {
@@ -20,15 +20,14 @@ class RetrofitInitializerOmdb {
 
     }
 
-
     private val retrofit = Retrofit.Builder()
         .client(okHttpClient)
-        .baseUrl("http://www.omdbapi.com/")
+        .baseUrl("https://api.fluo.site/v1/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun serviceOmdb(): ServiceOmdb {
-        return retrofit.create(ServiceOmdb::class.java)
+    fun serviceAccount(): ServiceAccount {
+        return retrofit.create(ServiceAccount::class.java)
     }
 
 }

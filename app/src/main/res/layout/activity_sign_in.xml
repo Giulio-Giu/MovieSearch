@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.MainActivity"
-        android:background="@color/white">
+        android:background="@color/white"
+        tools:context=".ui.activities.MainActivity">
 
     <RelativeLayout
             android:layout_width="wrap_content"
@@ -15,55 +14,70 @@
             android:layout_margin="20dp">
 
         <ImageView
-                android:id="@+id/iv_login_logo"
+                android:id="@+id/iv_signIn_logo"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/omdb_icon" />
+
+        <TextView
+                android:id="@+id/tv_signIn_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/omdb_icon"
-                android:layout_centerHorizontal="true"/>
+                android:layout_below="@id/iv_signIn_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="@string/title"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimaryDark"/>
 
         <EditText
-                android:id="@+id/et_login_email"
+                android:id="@+id/et_signIn_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_signIn_title"
+                android:layout_marginTop="20dp"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:layout_below="@id/iv_login_logo"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"/>
+                android:textSize="15sp"
+                android:fontFamily="@font/robotoregular"/>
 
         <EditText
-                android:id="@+id/et_login_password"
+                android:id="@+id/et_signIn_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/et_signIn_email"
+                android:layout_marginTop="5dp"
                 android:hint="@string/password"
                 android:inputType="textVisiblePassword"
-                android:layout_below="@id/et_login_email"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"/>
+                android:textSize="15sp"
+                android:fontFamily="@font/robotoregular"/>
 
         <Button
-                android:id="@+id/login_btn_signIn"
+                android:id="@+id/signIn_btn_signIn"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@id/et_login_password"
-                android:layout_marginTop="20dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/et_signIn_password"
+                android:layout_marginTop="60dp"
                 android:background="@drawable/button_green"
-                android:textColor="@color/white"
-                android:textAllCaps="false"
                 android:text="@string/btn_signIn"
-                android:textSize="25sp"/>
+                android:fontFamily="@font/robotoregular"
+                android:textAllCaps="false"
+                android:textColor="@color/textGrayUltraLight"
+                android:textSize="15sp" />
 
         <Button
-                android:id="@+id/login_btn_signUp"
+                android:id="@+id/signIn_btn_signUp"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_below="@id/login_btn_signIn"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/button_red"
-                android:textColor="@color/white"
+                android:layout_below="@id/signIn_btn_signIn"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/button_blue"
+                android:text="@string/btn_doSignUp"
                 android:textAllCaps="false"
-                android:text="@string/btn_cancel"
-                android:textSize="25sp"/>
+                android:textColor="@color/textGrayUltraLight"
+                android:textSize="15sp" />
 
     </RelativeLayout>
 
