@@ -42,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
         account.email = et_signUp_email.text.toString()
         account.password = et_signUp_password.text.toString()
 
-        val call = s.auth(account)
+        val call = s.insert(account)
 
         call.enqueue(object : Callback<Account> {
 
