@@ -21,6 +21,10 @@ class SignInActivity : AppCompatActivity() {
 
         tv_signIn_wrong_credentials.visibility = TextView.INVISIBLE
 
+        tv_forgot_password.setOnClickListener {
+            forgotPassword()
+        }
+
         signIn_btn_signIn.setOnClickListener {
             auth()
         }
@@ -28,6 +32,11 @@ class SignInActivity : AppCompatActivity() {
         signIn_btn_signUp.setOnClickListener {
             doSignUp()
         }
+    }
+
+    fun forgotPassword() {
+        val intent = Intent(this, ForgotPasswordActivity::class.java)
+        startActivity(intent)
     }
 
     fun doSignUp(){

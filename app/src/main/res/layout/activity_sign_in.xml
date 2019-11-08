@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".ui.activities.MainActivity">
+        tools:context=".ui.activities.SplashActivity">
 
     <RelativeLayout
             android:layout_width="wrap_content"
@@ -56,14 +56,33 @@
                 android:textSize="15sp" />
 
         <TextView
-                android:id="@+id/tv_signIn_wrong_credentials"
+                android:id="@+id/tv_forgot_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/et_signIn_password"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/forgot_password"
+                android:textColor="@color/dark_blue" />
+
+        <View
+                android:layout_width="134dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_forgot_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-2dp"
+                android:background="@color/dark_blue" />
+
+        <TextView
+                android:id="@+id/tv_signIn_wrong_credentials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_forgot_password"
+                android:layout_centerHorizontal="true"
                 android:layout_marginStart="3dp"
                 android:layout_marginLeft="3dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/wrong_credentials"
                 android:textColor="@color/dark_red"
                 android:textSize="16sp"
@@ -73,8 +92,8 @@
                 android:id="@+id/signIn_btn_signIn"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_below="@id/et_signIn_password"
-                android:layout_marginTop="60dp"
+                android:layout_below="@id/tv_forgot_password"
+                android:layout_marginTop="65dp"
                 android:background="@drawable/button_green"
                 android:fontFamily="@font/robotoregular"
                 android:text="@string/btn_signIn"

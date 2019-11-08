@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">OMDB Api</string>
 
-    <!-- MainActivity e activity_main -->
+    <!-- SplashActivity e activity_splash -->
     <string name="btn_doSignIn">Fazer Login</string>
     <string name="btn_doSignUp">Cadastre-se</string>
 
     <!-- SignInActivity e activity_sign_in -->
     <string name="btn_signIn">Entrar</string>
+    <string name="forgot_password">Esqueci minha senha</string>
     <string name="wrong_credentials">Usuário ou senha Incorretos!</string>
 
     <!-- SignUpActivity e activity_sign_up -->
@@ -19,8 +20,18 @@
     <string name="name">Nome</string>
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
-    <string name="btn_cancel">Cancelar</string>
     <string name="title">Movie Search</string>
+
+
+    <!-- activity_sign_up e activity_sign_in e activity_forgot_password -->
+    <string name="btn_cancel">Cancelar</string>
+    
+    <!-- ForgotPasswordActivity e activity_forgot_password -->
+    <string name="reset_password">Restaurar Senha</string>
+    <string name="forgotPassword_message">Se o seu e-mail exister em nossa base, você receberá um link com instruções para recuperar sua senha!</string>
+    <string name="btn_send">Enviar</string>
+    <string name="error_email_empty">Informe o e-mail!</string>
+    <string name="ok">Ok</string>
 
     <!-- fragment_search -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
