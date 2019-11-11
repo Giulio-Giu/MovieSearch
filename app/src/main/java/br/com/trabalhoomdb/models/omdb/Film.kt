@@ -1,8 +1,6 @@
 package br.com.trabalhoomdb.models.omdb
 
-import br.com.trabalhoomdb.models.omdb.Rating
-
-data class Serie(
+data class Film(
     var Title: String,
     var Year: String,
     var Released: String,
@@ -18,6 +16,9 @@ data class Serie(
     var Ratings: List<Rating>,
     var imdbRating: String,
     var imdbVotes: String,
+    var Type: String,
+    var BoxOffice: String,
+    var Production: String,
     var totalSeasons: String,
     var Response: String
 )

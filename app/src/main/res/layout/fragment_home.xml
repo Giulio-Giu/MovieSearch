@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_gray"
+        tools:context=".ui.fragments.HomeFragment">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_fragmentHome_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/home_title"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                    android:id="@+id/et_movieSearchHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="@string/home_movieSearchHint"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragmentHome_title" />
+
+            <Button
+                    android:id="@+id/home_btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_green"
+                    android:text="@string/home_btn_search"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/et_movieSearchHint" />
+
+            <TextView
+                    android:id="@+id/tv_movie_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/home_movie_title"
+                    android:textColor="@color/orange"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/home_btn_search" />
+
+            <ImageView
+                    android:id="@+id/iv_movie_star"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="37dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toStartOf="@id/tv_movie_imdbRating"
+                    app:layout_constraintTop_toBottomOf="@id/home_btn_search" />
+
+            <TextView
+                    android:id="@+id/tv_movie_imdbRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/home_movie_imdb_rating"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_movie_imdbRating_total"
+                    app:layout_constraintTop_toBottomOf="@id/home_btn_search" />
+
+            <TextView
+                    android:id="@+id/tv_movie_imdbRating_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="38dp"
+                    android:text="@string/home_movie_imdb_rating_total"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/home_btn_search" />
+
+            <TextView
+                    android:id="@+id/tv_movie_imdbVotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="52dp"
+                    android:text="@string/home_movie_imdb_votes"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_movie_imdbRating"
+                    app:layout_constraintTop_toBottomOf="@id/home_btn_search" />
+
+            <TextView
+                    android:id="@+id/tv_movie_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/home_movie_type"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_title" />
+
+            <TextView
+                    android:id="@+id/tv_movie_runtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/home_movie_runtime"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_type"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_title" />
+
+            <TextView
+                    android:id="@+id/tv_movie_released"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/home_movie_released"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_runtime"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_title" />
+
+            <TextView
+                    android:id="@+id/tv_movie_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/home_movie_year"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_released"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_title" />
+
+            <TextView
+                    android:id="@+id/tv_movie_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/home_movie_country"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_year"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_title" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/black"
+                    app:layout_constraintBottom_toTopOf="@id/tv_movie_seasonGuide"/>
+
+            <TextView
+                    android:id="@+id/tv_movie_seasonGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/home_movie_seasonGuide"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_type" />
+
+            <TextView
+                    android:id="@+id/tv_movie_totalSeasons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="21dp"
+                    android:text="@string/home_movie_totalSeasons"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_seasonGuide" />
+
+            <View
+                    android:id="@+id/view_beow_totalSeasons"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_totalSeasons"/>
+
+            <androidx.constraintlayout.widget.Group
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="tv_movie_seasonGuide,tv_movie_totalSeasons,view_beow_totalSeasons"/>
+
+            <ImageButton
+                    android:id="@+id/tb_seasons_arrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_arrow_right"
+                    android:background="@color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_movie_seasonGuide" />
+
+
+            <ImageView
+                    android:id="@+id/iv_movie_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="1dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintTop_toBottomOf="@id/view_beow_totalSeasons" />
+
+            <TextView
+                    android:id="@+id/tv_movie_plot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/home_movie_plot"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/iv_movie_poster" />
+
+
+            <TextView
+                    android:id="@+id/tv_movie_actors_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/home_movie_actors_title"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_plot" />
+
+            <TextView
+                    android:id="@+id/tv_movie_actors"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/home_movie_actors"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_actors_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_plot" />
+
+            <TextView
+                    android:id="@+id/tv_movie_writers_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/home_movie_writers_title"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_actors" />
+
+            <TextView
+                    android:id="@+id/tv_movie_writers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/home_movie_writers"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_writers_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_actors" />
+
+            <TextView
+                    android:id="@+id/tv_movie_awards_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="@string/home_movie_awards_title"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_writers" />
+
+            <TextView
+                    android:id="@+id/tv_movie_awards"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/home_movie_awards"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_movie_writers_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_movie_writers" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

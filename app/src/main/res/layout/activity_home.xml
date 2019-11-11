@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activities.HomeActivity">
+
+    <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/line">
+
+    </FrameLayout>
+
+    <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toTopOf="@id/navbar"/>
+
+    <LinearLayout
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/lightgray"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/btn_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".ui.activities.HomeActivity"
-                android:background="@color/white">
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_home" />
+        <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"/>
 
-   <FrameLayout
-           android:id="@+id/frame_layout"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent">
-
-   </FrameLayout>
+        <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_profile" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
