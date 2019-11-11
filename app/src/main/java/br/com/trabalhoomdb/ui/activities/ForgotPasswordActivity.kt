@@ -1,15 +1,16 @@
 package br.com.trabalhoomdb.ui.activities
 
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import br.com.trabalhoomdb.R
+import br.com.trabalhoomdb.models.account.Account
 import br.com.trabalhoomdb.services.account.RetrofitInitializerAccount
 import com.afollestad.materialdialogs.MaterialDialog
 import kotlinx.android.synthetic.main.activity_forgot_password.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ForgotPasswordActivity : AppCompatActivity() {
 
@@ -20,7 +21,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         tv_forgotPassword_error_message.visibility = TextView.INVISIBLE
 
         forgotPassword_btn_reset.setOnClickListener {
-            if(et_forgotPassword_email.text.toString().isNotEmpty()) {
+            if(et_forgotPassword_email.text.toString().trim().isNotEmpty()) {
                 forgotPassword()
                 showMessage()
 
@@ -48,6 +49,16 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
     fun forgotPassword() {
         val s = RetrofitInitializerAccount().serviceAccount()
-        val call = s.forgotPassword(et_forgotPassword_email.text.toString())
+        val call = s.forgotPassword(et_forgotPassword_email.text.toString().trim())
+
+        call.enqueue(object : Callback<Account> {
+
+            override fun onResponse(call: Call<Account>?, response: Response<Account>?) {
+            }
+
+            override fun onFailure(call: Call<Account>?, t: Throwable?) {
+            }
+        })
+
     }
 }
