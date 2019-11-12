@@ -213,9 +213,9 @@
 
                 <TextView
                         android:id="@+id/tv_movie_seasonGuide"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="20dp"
+                        android:paddingHorizontal="20dp"
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/robotomedium"
                         android:text="@string/home_series_seasonGuide"
@@ -225,9 +225,9 @@
 
                 <TextView
                         android:id="@+id/tv_movie_totalSeasons"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="21dp"
+                        android:paddingHorizontal="21dp"
                         android:fontFamily="@font/robotoregular"
                         android:text="@string/home_series_totalSeasons"
                         android:textSize="13sp"
