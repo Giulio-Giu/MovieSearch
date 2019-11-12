@@ -40,38 +40,44 @@
     <string name="home_seasonSearchHint">Informe o número da temporada para pesquisar</string>
     <string name="home_btn_search_episodes">Listar Episódios</string>
 
-    <string name="home_movie_title">Lost</string>
-    <string name="home_movie_year">| &#32;2004-2010</string>
-    <string name="home_movie_released">| &#32;22 Sep 2004</string>
+    <string name="home_film_title">Lost</string>
+    <string name="home_film_released">| &#32;22 Sep 2004</string>
 
-    <string name="home_movie_runtime">| &#32;44 min</string>
-    <string name="home_movie_genre">Adventure, Drama, Fantasy, Mystery, Sci-Fi, Thriller</string>
-    <string name="home_movie_director">N/A</string>
+    <string name="home_film_runtime">| &#32;44 min</string>
 
-    <string name="home_movie_writers_title">Writers:</string>
-    <string name="home_movie_writers">J.J. Abrams, Jeffrey Lieber, Damon Lindelof</string>
+    <string name="home_film_genre_title">Genre:</string>
+    <string name="home_film_genre">Adventure, Drama, Fantasy, Mystery, Sci-Fi, Thriller</string>
 
-    <string name="home_movie_actors_title">Actors:</string>
-    <string name="home_movie_actors">Jorge Garcia, Josh Holloway, Yunjin Kim, Evangeline Lilly</string>
+    <string name="home_film_writers_title">Writers:</string>
+    <string name="home_film_writers">J.J. Abrams, Jeffrey Lieber, Damon Lindelof</string>
 
-    <string name="home_movie_plot">The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.</string>
-    <string name="home_movie_country">| &#32;USA</string>
+    <string name="home_film_actors_title">Actors:</string>
+    <string name="home_film_actors">Jorge Garcia, Josh Holloway, Yunjin Kim, Evangeline Lilly</string>
 
-    <string name="home_movie_awards_title">Awards:</string>
-    <string name="home_movie_awards">Won 1 Golden Globe. Another 105 wins &amp; 376 nominations.</string>
+    <string name="home_film_plot">The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.</string>
+    <string name="home_film_country">| &#32;USA</string>
 
-    <string name="home_movie_rating_source">Internet Movie Database</string>
-    <string name="home_movie_rating_value">8.3/10</string>
+    <string name="home_film_awards_title">Awards:</string>
+    <string name="home_film_awards">Won 1 Golden Globe. Another 105 wins &amp; 376 nominations.</string>
 
-    <string name="home_movie_imdb_rating_total">/10</string>
-    <string name="home_movie_imdb_rating">8.3</string>
-    <string name="home_movie_imdb_votes">464,567</string>
+    <string name="home_film_rating_source">Internet Movie Database</string>
+    <string name="home_film_rating_value">8.3/10</string>
 
-    <string name="home_movie_seasonGuide">Season Guide</string>
-    <string name="home_movie_totalSeasons">6 seasons</string>
+    <string name="home_film_imdb_rating_total">/10</string>
+    <string name="home_film_imdb_rating">8.3</string>
+    <string name="home_film_imdb_votes">464,567</string>
+    <string name="home_film_type">Series</string>
 
-    <string name="home_movie_type">Series</string>
+    <string name="home_series_year">| &#32;2004-2010</string>
+    <string name="home_series_seasonGuide">Season Guide</string>
+    <string name="home_series_totalSeasons">6 seasons</string>
 
+    <string name="home_movie_director_title">Director:</string>
+    <string name="home_movie_director">Josh Whedon</string>
+
+    <string name="home_movie_boxOffice_title">Box Office:</string>
     <string name="home_movie_boxOffice">$623,279,547</string>
+
+    <string name="home_movie_production_title">Production:</string>
     <string name="home_movie_production">Walt Disney Pictures</string>
 </resources>
