@@ -64,7 +64,7 @@
                         android:id="@+id/group_show_only_series"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:constraint_referenced_ids="tv_movie_year,view_above_seasonGuide,tv_movie_seasonGuide,tv_movie_totalSeasons,view_below_totalSeasons,ib_seasons_arrow" />
+                        app:constraint_referenced_ids="tv_movie_year,view_above_seasonGuide,tv_movie_episodeGuide,tv_movie_totalSeasons,view_below_totalSeasons,ib_seasons_arrow" />
 
                 <androidx.constraintlayout.widget.Group
                         android:id="@+id/group_show_only_movie"
@@ -209,16 +209,16 @@
                         android:layout_height="1dp"
                         android:layout_marginBottom="3dp"
                         android:background="@color/black"
-                        app:layout_constraintBottom_toTopOf="@id/tv_movie_seasonGuide" />
+                        app:layout_constraintBottom_toTopOf="@id/tv_movie_episodeGuide" />
 
                 <TextView
-                        android:id="@+id/tv_movie_seasonGuide"
+                        android:id="@+id/tv_movie_episodeGuide"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="20dp"
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/robotomedium"
-                        android:text="@string/home_series_seasonGuide"
+                        android:text="@string/home_series_episodeGuide"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_type" />
@@ -232,7 +232,7 @@
                         android:text="@string/home_series_totalSeasons"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_movie_seasonGuide" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_movie_episodeGuide" />
 
                 <View
                         android:id="@+id/view_below_totalSeasons"
@@ -251,7 +251,7 @@
                         android:background="@color/transparent"
                         android:src="@drawable/ic_arrow_right"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/tv_movie_seasonGuide" />
+                        app:layout_constraintTop_toTopOf="@id/tv_movie_episodeGuide" />
                 <ImageView
                         android:id="@+id/iv_movie_poster"
                         android:layout_width="match_parent"
