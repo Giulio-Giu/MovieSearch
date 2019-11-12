@@ -2,18 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
 
     <TextView
             android:id="@+id/episode_number"
-            android:layout_width="18dp"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="1dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="10dp"
-            android:text="40:"
-            android:textSize="13sp"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/itemEpisode_number"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,19 +25,31 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:text="What Happened and What's Going On"
+            android:fontFamily="@font/robotomedium"
+            android:text="@string/itemEpisode_title"
             android:textSize="16sp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/item_episode_star"
             app:layout_constraintStart_toEndOf="@id/episode_number"
-            app:layout_constraintEnd_toStartOf="@id/episode_rating"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+            android:id="@+id/item_episode_star"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/star"
+            app:layout_constraintEnd_toStartOf="@id/episode_rating"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/episode_rating"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            android:layout_marginRight="10dp"
-            android:text="9.3"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/itemEpisode_rating"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

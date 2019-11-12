@@ -82,5 +82,13 @@
     <string name="home_movie_production">Walt Disney Pictures</string>
 
     <!-- fragment_episodes -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmentEpisode_title">Episode List</string>
+    <string name="fragmentEpisode_seasonSearch_hint">Enter a season number</string>
+    <string name="fragmentEpisode_btn_search">Search Episodes</string>
+
+    <!-- item_episode -->
+    <string name="itemEpisode_number">40:</string>
+    <string name="itemEpisode_title">What Happened and What\'s Going On</string>
+    <string name="itemEpisode_rating">9.3</string>
+
 </resources>
