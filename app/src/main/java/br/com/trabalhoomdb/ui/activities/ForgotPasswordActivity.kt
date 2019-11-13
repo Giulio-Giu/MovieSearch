@@ -51,12 +51,13 @@ class ForgotPasswordActivity : AppCompatActivity() {
         val s = RetrofitInitializerAccount().serviceAccount()
         val call = s.forgotPassword(et_forgotPassword_email.text.toString().trim())
 
-        call.enqueue(object : Callback<Account> {
+        call.enqueue(object : Callback<Void> {
 
-            override fun onResponse(call: Call<Account>?, response: Response<Account>?) {
+            override fun onFailure(call: Call<Void>?, t: Throwable?) {
+
             }
 
-            override fun onFailure(call: Call<Account>?, t: Throwable?) {
+            override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
             }
         })
 

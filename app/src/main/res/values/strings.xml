@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OMDB Api</string>
+    <string name="app_name">FSTG Search</string>
 
     <!-- SplashActivity e activity_splash -->
     <string name="btn_doSignIn">Fazer Login</string>

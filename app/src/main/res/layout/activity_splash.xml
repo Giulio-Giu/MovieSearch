@@ -12,7 +12,7 @@
             android:id="@+id/iv_main_logo"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:src="@drawable/omdb_icon"
+            android:src="@drawable/icone_trab_dirrceu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
