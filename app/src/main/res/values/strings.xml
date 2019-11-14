@@ -1,44 +1,40 @@
 <resources>
-    <string name="app_name">FSTG Search</string>
-
-    <!-- SplashActivity e activity_splash -->
-    <string name="btn_doSignIn">Fazer Login</string>
-    <string name="btn_doSignUp">Cadastre-se</string>
+    <string name="app_name">MSI API</string>
 
     <!-- SignInActivity e activity_sign_in -->
-    <string name="btn_signIn">Entrar</string>
-    <string name="forgot_password">Esqueci minha senha</string>
-    <string name="wrong_credentials">Usuário ou senha Incorretos!</string>
+    <string name="btn_signIn">Sign In</string>
+    <string name="forgot_password">Forgot my password</string>
+    <string name="wrong_credentials">Wrong Credentials!</string>
 
     <!-- SignUpActivity e activity_sign_up -->
-    <string name="confirmPassword">Confirmar Senha</string>
-    <string name="btn_signUp">Cadastrar</string>
-    <string name="error_passwords">As senhas não são iguais!</string>
-    <string name="error_data">Dados inválidos!</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="error_passwords">Passwords do not match</string>
+    <string name="error_data">Invalid data!</string>
 
     <!-- activity_sign_up e activity_sign_in -->
-    <string name="name">Nome</string>
-    <string name="email">E-mail</string>
-    <string name="password">Senha</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="title">Movie Search</string>
-
+    <string name="btn_signUp">Sign Up</string>
 
     <!-- activity_sign_up e activity_sign_in e activity_forgot_password -->
-    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_cancel">Cancel</string>
 
     <!-- ForgotPasswordActivity e activity_forgot_password -->
-    <string name="reset_password">Restaurar Senha</string>
-    <string name="forgotPassword_message">Se o seu e-mail exister em nossa base, você receberá um link com instruções para recuperar sua senha!</string>
-    <string name="btn_send">Enviar</string>
-    <string name="error_email_empty">Informe o e-mail!</string>
-    <string name="ok">Ok</string>
+    <string name="reset_password">Recover Password</string>
+    <string name="forgotPassword_message">If your email exists in our database, you will receive a link with instructions to recover your password!</string>
+    <string name="btn_send">Send</string>
+    <string name="error_email_empty">Email cannot be empty</string>
+    <string name="ok">Okay</string>
 
     <!-- fragment_home -->
-    <string name="home_title">Info de Filmes e Série</string>
-    <string name="home_movieSearchHint">Digite o nome de um filme ou série para pesquisar</string>
-    <string name="home_btn_search">Pesquisar</string>
-    <string name="home_seasonSearchHint">Informe o número da temporada para pesquisar</string>
-    <string name="home_btn_search_episodes">Listar Episódios</string>
+    <string name="home_title">Movies/Series Info</string>
+    <string name="home_message_error_searchField">Search field cannot be empty</string>
+    <string name="home_message_error_searchResult">Your search returned no results</string>
+    <string name="home_movieSearchHint">Enter the name of the movie or series</string>
+    <string name="home_btn_search">Search</string>
+    <string name="home_seasonSearchHint">Enter a season number</string>
 
     <string name="home_film_title">Lost</string>
     <string name="home_film_released">| &#32;22 Sep 2004</string>

@@ -49,7 +49,11 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
     fun forgotPassword() {
         val s = RetrofitInitializerAccount().serviceAccount()
-        val call = s.forgotPassword(et_forgotPassword_email.text.toString().trim())
+
+        val account = Account()
+        account.email = et_forgotPassword_email.text.toString().trim()
+
+        val call = s.forgotPassword(account)
 
         call.enqueue(object : Callback<Void> {
 

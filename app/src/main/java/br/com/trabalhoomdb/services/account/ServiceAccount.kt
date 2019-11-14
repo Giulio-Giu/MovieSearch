@@ -13,8 +13,7 @@ interface ServiceAccount {
     @POST("account")
     fun insert(@Body account: Account): Call<Account>
 
-    Todo("passar account só com o email no body")
     @POST("account/forgot")
-    fun forgotPassword(@Body email: String): Call<Void>
+    fun forgotPassword(@Body account: Account): Call<Void>
 
 }
