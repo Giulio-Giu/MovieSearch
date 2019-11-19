@@ -32,14 +32,15 @@
     <string name="home_title">Movies/Series Info</string>
     <string name="home_message_error_searchField">Search field cannot be empty</string>
     <string name="home_message_error_searchResult">Your search returned no results</string>
+    <string name="home_message_failure_enqueue">Get some error</string>
+
     <string name="home_movieSearchHint">Enter the name of the movie or series</string>
     <string name="home_btn_search">Search</string>
     <string name="home_seasonSearchHint">Enter a season number</string>
 
     <string name="home_film_title">Lost</string>
-    <string name="home_film_released">| &#32;22 Sep 2004</string>
-
-    <string name="home_film_runtime">| &#32;44 min</string>
+    <string name="home_film_released">22 Sep 2004</string>
+    <string name="home_film_runtime">44 min</string>
 
     <string name="home_film_genre_title">Genre:</string>
     <string name="home_film_genre">Adventure, Drama, Fantasy, Mystery, Sci-Fi, Thriller</string>
@@ -51,7 +52,7 @@
     <string name="home_film_actors">Jorge Garcia, Josh Holloway, Yunjin Kim, Evangeline Lilly</string>
 
     <string name="home_film_plot">The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.</string>
-    <string name="home_film_country">| &#32;USA</string>
+    <string name="home_film_country">USA</string>
 
     <string name="home_film_awards_title">Awards:</string>
     <string name="home_film_awards">Won 1 Golden Globe. Another 105 wins &amp; 376 nominations.</string>
@@ -64,7 +65,7 @@
     <string name="home_film_imdb_votes">464,567</string>
     <string name="home_film_type">Series</string>
 
-    <string name="home_series_year">| &#32;2004-2010</string>
+    <string name="home_series_year">2004-2010</string>
     <string name="home_series_episodeGuide">Episode Guide</string>
     <string name="home_series_totalSeasons">6 seasons</string>
 
