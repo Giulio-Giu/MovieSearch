@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">MSI API</string>
+    
+    <string name="PREF_NAME">MSI</string>
+    <string name="PREF_EMAIL">email</string>
+    <string name="PREF_PASSWORD">password</string>
+    <string name="PREF_ISLOGGED">isLogged</string>
 
     <!-- SignInActivity e activity_sign_in -->
     <string name="btn_signIn">Sign In</string>
@@ -82,6 +87,9 @@
     <string name="fragmentEpisode_title">Episode List</string>
     <string name="fragmentEpisode_seasonSearch_hint">Enter a season number</string>
     <string name="fragmentEpisode_btn_search">Search Episodes</string>
+    <string name="fragmentEpisode_message_error_seasonNumberField">Season number cannot be empty</string>
+    <string name="fragmentEpisode_message_error_searchResult">Your search returned no results</string>
+    <string name="fragmentEpisode_message_failure_enqueue">Get some error</string>
 
     <!-- item_episode -->
     <string name="itemEpisode_number">40:</string>

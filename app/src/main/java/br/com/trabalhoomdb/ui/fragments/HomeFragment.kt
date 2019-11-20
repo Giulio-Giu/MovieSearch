@@ -11,8 +11,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.Group
-
 import br.com.trabalhoomdb.R
+import br.com.trabalhoomdb.models.omdb.Episode
 import br.com.trabalhoomdb.models.omdb.Film
 import br.com.trabalhoomdb.services.omdb.RetrofitInitializerOmdb
 import br.com.trabalhoomdb.ui.activities.HomeActivity
@@ -22,6 +22,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
+
 /**
  * A simple [Fragment] subclass.
  */
@@ -29,6 +31,7 @@ class HomeFragment : Fragment() {
 
     val apiKey = "2f5cfd66"
     var imageUrl = ""
+    lateinit var contextActivity: HomeActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,14 +44,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        contextActivity = context as HomeActivity
+
         tv_home_messageError.visibility = TextView.INVISIBLE
         constraint_home_result.visibility = ConstraintLayout.INVISIBLE
 
         home_btn_search.setOnClickListener {
             if (et_movieSearchHint.text.toString().trim().isEmpty()) {
                 tv_home_messageError.visibility = TextView.VISIBLE
-            } else {
                 tv_home_messageError.text = resources.getString(R.string.home_message_error_searchField)
+            } else {
                 tv_home_messageError.visibility = TextView.INVISIBLE
                 searchFilm(et_movieSearchHint.text.toString().trim())
             }
@@ -59,10 +64,26 @@ class HomeFragment : Fragment() {
             intent.setDataAndType(Uri.parse(imageUrl), "image/png")
             startActivity(intent)
         }
+
+        tv_movie_episodeGuide.setOnClickListener {
+            gotoEpisodeGuide()
+        }
+
+        tv_movie_totalSeasons.setOnClickListener {
+            gotoEpisodeGuide()
+        }
+
+        ib_episodes_arrow.setOnClickListener {
+            gotoEpisodeGuide()
+        }
+    }
+
+    fun gotoEpisodeGuide() {
+        contextActivity.intent.putExtra("search", et_movieSearchHint.text.toString().trim())
+        (activity as HomeActivity).setFragment(EpisodesFragment())
     }
 
     fun searchFilm(search: String) {
-        val contextActivity = context as HomeActivity
 
         val f = RetrofitInitializerOmdb().serviceOmdb()
 

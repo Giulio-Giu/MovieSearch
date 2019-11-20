@@ -12,6 +12,6 @@ interface ServiceOmdb {
     fun searchFilm(@Query("t") t: String, @Query("apikey") apikey: String): Call<Film>
 
     @GET("default.aspx")
-    fun searchSeason(@Query("t") t: String, @Query("Season") season: String, @Query("apikey") apikey: String): Call<ResponseEpisodes>
+    fun listEpisodes(@Query("t") t: String, @Query("Season") season: String, @Query("apikey") apikey: String): Call<ResponseEpisodes>
 
 }
