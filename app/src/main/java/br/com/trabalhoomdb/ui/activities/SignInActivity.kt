@@ -24,10 +24,16 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         //verificando se tem usuário logado
-        sharedPrefferencesGlobal = getSharedPreferences(getString(R.string.PREF_NAME), Context.MODE_PRIVATE)
+        sharedPrefferencesGlobal = getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
 
-        if (sharedPrefferencesGlobal.getBoolean(getString(R.string.PREF_ISLOGGED), false)) {
-            auth(isLogged = true)
+        if (sharedPrefferencesGlobal.getString(getString(R.string.PREF_EMAIL), "")!!.isNotEmpty()) {
+
+            val user = Account()
+            user.email = sharedPrefferencesGlobal.getString(getString(R.string.PREF_EMAIL), "")!!
+            user.password = sharedPrefferencesGlobal.getString(getString(R.string.PREF_PASSWORD), "")!!
+            user.name = sharedPrefferencesGlobal.getString(getString(R.string.PREF_NAME), "")!!
+
+            gotoHome(true, user)
         }
 
         tv_signIn_wrong_credentials.visibility = TextView.INVISIBLE
@@ -37,7 +43,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         signIn_btn_signIn.setOnClickListener {
-            auth(isLogged = false)
+            auth()
         }
 
         signIn_btn_signUp.setOnClickListener {
@@ -55,18 +61,14 @@ class SignInActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun auth(isLogged: Boolean) {
+    fun auth() {
         val s = RetrofitInitializerAccount().serviceAccount()
 
         val account = Account()
 
-        if (isLogged) {
-            account.email = sharedPrefferencesGlobal.getString(getString(R.string.PREF_EMAIL), "")!!
-            account.password = sharedPrefferencesGlobal.getString(getString(R.string.PREF_PASSWORD), "")!!
-        } else {
-            account.email = et_signIn_email.text.toString()
-            account.password = et_signIn_password.text.toString()
-        }
+        account.email = et_signIn_email.text.toString()
+        account.password = et_signIn_password.text.toString()
+
 
         val call = s.auth(account)
 
@@ -77,10 +79,9 @@ class SignInActivity : AppCompatActivity() {
                     if (it.code() == 200) {
                         tv_signIn_wrong_credentials.visibility = TextView.INVISIBLE
                         Toast.makeText(this@SignInActivity, "Autenticado!", Toast.LENGTH_LONG).show()
-                        gotoHome()
+                        gotoHome(false, it.body())
                     } else {
                         tv_signIn_wrong_credentials.visibility = TextView.VISIBLE
-//                        Toast.makeText(this@SignInActivity, "Usuário ou senha inválidos!", Toast.LENGTH_LONG).show()
                     }
                 }
             }
@@ -91,16 +92,18 @@ class SignInActivity : AppCompatActivity() {
         })
     }
 
-    fun gotoHome() {
-
+    fun gotoHome(isLogged: Boolean, user: Account) {
         //salvando a sessão do usuário, para permanecer logado ao iniciar o app
-        sharedPrefferencesGlobal.edit()
-            .putBoolean(getString(R.string.PREF_ISLOGGED), true)
-            .putString(getString(R.string.PREF_EMAIL), et_signIn_email.text.toString().trim())
-            .putString(getString(R.string.PREF_PASSWORD), et_signIn_password.text.toString().trim())
-            .apply()
+        if (!isLogged) {
+            sharedPrefferencesGlobal.edit()
+                .putString(getString(R.string.PREF_EMAIL), et_signIn_email.text.toString().trim())
+                .putString(getString(R.string.PREF_PASSWORD), et_signIn_password.text.toString().trim())
+                .putString(getString(R.string.PREF_NAME), user.name)
+                .apply()
+        }
 
         val intent = Intent(this, HomeActivity::class.java)
+        intent.putExtra(getString(R.string.USER), user)
         startActivity(intent)
         finish()
     }

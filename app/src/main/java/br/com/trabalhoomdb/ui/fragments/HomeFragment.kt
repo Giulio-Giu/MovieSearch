@@ -1,5 +1,6 @@
 package br.com.trabalhoomdb.ui.fragments
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -117,6 +118,12 @@ class HomeFragment : Fragment() {
     }
 
     fun getItems(film: Film, contextActivity: HomeActivity) {
+
+        val shared = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
+
+        val searchList = shared.getStringSet(getString(R.string.PREF_LIST_SEARCH), null)
+
+        searchList?.add(et_movieSearchHint.text.toString().trim())
 
         /**itens comuns*/
         tv_movie_title.text = film.Title
