@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="1dp">
+
+    <View
+            android:id="@+id/view_itemHistoric"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_itemHistoric_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/itemHistoric_search"
+            android:textSize="20sp"
+            app:fontFamily="@font/robotomedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_itemHistoric"/>
+
+    <ImageButton
+            android:id="@+id/ib_itemHistoric_arrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_itemHistoric"/>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_itemHistoric_search"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

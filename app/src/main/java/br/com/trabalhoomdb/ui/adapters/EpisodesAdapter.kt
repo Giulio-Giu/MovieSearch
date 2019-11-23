@@ -1,10 +1,9 @@
-package br.com.trabalhoomdb.ui.adapters.omdb
+package br.com.trabalhoomdb.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.trabalhoomdb.R

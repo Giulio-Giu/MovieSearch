@@ -13,8 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/line">
+            app:layout_constraintBottom_toTopOf="@id/line"
+            app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 
@@ -23,16 +23,16 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/gray"
-            app:layout_constraintTop_toBottomOf="@id/frame_layout"
-            app:layout_constraintBottom_toTopOf="@id/navbar"/>
+            app:layout_constraintBottom_toTopOf="@id/navbar"
+            app:layout_constraintTop_toBottomOf="@id/frame_layout"/>
 
     <LinearLayout
             android:id="@+id/navbar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:background="@color/lightgray"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
                 android:id="@+id/btn_home"
@@ -40,7 +40,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/transparent"
-                android:src="@drawable/ic_home" />
+                android:src="@drawable/ic_home"/>
         <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
@@ -52,7 +52,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/transparent"
-                android:src="@drawable/ic_profile" />
+                android:src="@drawable/ic_profile"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

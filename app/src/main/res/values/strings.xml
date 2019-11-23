@@ -5,7 +5,6 @@
     <string name="PREF_EMAIL">email</string>
     <string name="PREF_PASSWORD">password</string>
     <string name="PREF_NAME">name</string>
-    <string name="PREF_PICTURE">picture</string>
     <string name="PREF_LIST_SEARCH">listSearch</string>
     <string name="USER">userAccount</string>
 
@@ -103,7 +102,17 @@
     <string name="itemEpisode_title">What Happened and What\'s Going On</string>
     <string name="itemEpisode_rating">9.3</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- fragment_profile -->
+    <string name="fragmentProfile_userName">Giulio Machado</string>
+    <string name="fragmentProfile_userEmail">g.98.machado@hotmail.com</string>
+    <string name="fragmentProfile_userCreateAt">14/11/2019 19:42:29</string>
+    <string name="fragmentProfile_historic">Historic</string>
+
+    <!-- fragment_historic -->
+    <string name="fragmentHistoric_title">Historic</string>
+    <string name="fragmentHistoric_message_error">You haven\'t done any research yet!</string>
+
+    <!-- item_historic -->
+    <string name="itemHistoric_search">Lost</string>
 
 </resources>

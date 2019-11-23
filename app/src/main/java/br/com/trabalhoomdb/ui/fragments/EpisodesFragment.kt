@@ -9,13 +9,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import br.com.trabalhoomdb.R
 import br.com.trabalhoomdb.models.omdb.Episode
 import br.com.trabalhoomdb.models.omdb.ResponseEpisodes
 import br.com.trabalhoomdb.services.omdb.RetrofitInitializerOmdb
 import br.com.trabalhoomdb.ui.activities.HomeActivity
-import br.com.trabalhoomdb.ui.adapters.omdb.EpisodesAdapter
+import br.com.trabalhoomdb.ui.adapters.EpisodesAdapter
 import kotlinx.android.synthetic.main.fragment_episodes.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -75,6 +76,7 @@ class EpisodesFragment : Fragment() {
                             resources.getString(R.string.fragmentEpisode_message_error_searchResult),
                             Toast.LENGTH_LONG
                         ).show()
+                        fragmentEpisode_recyclerView.visibility = RecyclerView.INVISIBLE
                         tv_fragmentEpisode_messageError.visibility = TextView.VISIBLE
                         tv_fragmentEpisode_messageError.text =
                             resources.getString(R.string.fragmentEpisode_message_error_searchResult)

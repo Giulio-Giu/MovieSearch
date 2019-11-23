@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -18,9 +19,10 @@
                 android:id="@+id/iv_signIn_logo"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
-                android:scaleType="centerCrop"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/msi_logo" />
+                android:background="@color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/msi_logo"/>
         <TextView
                 android:id="@+id/tv_signIn_title"
                 android:layout_width="wrap_content"
@@ -28,10 +30,10 @@
                 android:layout_below="@id/iv_signIn_logo"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:fontFamily="@font/robotomedium"
+                app:fontFamily="@font/robotomedium"
                 android:text="@string/title"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="22sp" />
+                android:textSize="22sp"/>
 
         <EditText
                 android:id="@+id/et_signIn_email"
@@ -39,10 +41,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_signIn_title"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/robotoregular"
+                app:fontFamily="@font/robotoregular"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:textSize="15sp" />
+                android:textSize="15sp"/>
 
         <EditText
                 android:id="@+id/et_signIn_password"
@@ -50,10 +52,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/et_signIn_email"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/robotoregular"
+                app:fontFamily="@font/robotoregular"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:textSize="15sp" />
+                android:textSize="15sp"/>
 
         <TextView
                 android:id="@+id/tv_forgot_password"
@@ -62,9 +64,9 @@
                 android:layout_below="@id/et_signIn_password"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="7dp"
-                android:fontFamily="@font/robotoregular"
+                app:fontFamily="@font/robotoregular"
                 android:text="@string/forgot_password"
-                android:textColor="@color/dark_blue" />
+                android:textColor="@color/dark_blue"/>
 
         <View
                 android:layout_width="134dp"
@@ -72,7 +74,7 @@
                 android:layout_below="@id/tv_forgot_password"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="-2dp"
-                android:background="@color/dark_blue" />
+                android:background="@color/dark_blue"/>
 
         <TextView
                 android:id="@+id/tv_signIn_wrong_credentials"
@@ -83,10 +85,11 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="20dp"
+                app:fontFamily="@font/robotomedium"
                 android:text="@string/wrong_credentials"
                 android:textColor="@color/dark_red"
                 android:textSize="16sp"
-                android:visibility="invisible" />
+                android:visibility="invisible"/>
 
         <Button
                 android:id="@+id/signIn_btn_signIn"
@@ -95,11 +98,11 @@
                 android:layout_below="@id/tv_forgot_password"
                 android:layout_marginTop="65dp"
                 android:background="@drawable/button_green"
-                android:fontFamily="@font/robotoregular"
+                app:fontFamily="@font/robotoregular"
                 android:text="@string/btn_signIn"
                 android:textAllCaps="false"
                 android:textColor="@color/textGrayUltraLight"
-                android:textSize="15sp" />
+                android:textSize="15sp"/>
 
         <Button
                 android:id="@+id/signIn_btn_signUp"
@@ -108,10 +111,11 @@
                 android:layout_below="@id/signIn_btn_signIn"
                 android:layout_marginTop="29dp"
                 android:background="@drawable/button_blue"
+                app:fontFamily="@font/robotoregular"
                 android:text="@string/btn_signUp"
                 android:textAllCaps="false"
                 android:textColor="@color/textGrayUltraLight"
-                android:textSize="15sp" />
+                android:textSize="15sp"/>
 
     </RelativeLayout>
 

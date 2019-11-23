@@ -6,7 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_gray"
-        android:paddingHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         tools:context=".ui.fragments.EpisodesFragment">
 
     <TextView
@@ -14,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/robotomedium"
+            app:fontFamily="@font/robotomedium"
             android:gravity="center_horizontal"
             android:text="@string/fragmentEpisode_title"
             android:textColor="@color/orange"
@@ -28,7 +29,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
-            android:fontFamily="@font/robotoregular"
+            app:fontFamily="@font/robotoregular"
             android:hint="@string/fragmentEpisode_seasonSearch_hint"
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/fragmentEpisode_btn_search"
@@ -56,7 +57,7 @@
             android:layout_height="29dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/button_blue"
-            android:fontFamily="@font/robotoregular"
+            app:fontFamily="@font/robotoregular"
             android:text="@string/fragmentEpisode_btn_search"
             android:textAllCaps="false"
             android:textColor="@color/textGrayUltraLight"

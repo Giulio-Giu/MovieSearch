@@ -7,4 +7,5 @@ class Account : Serializable {
     lateinit var email: String
     lateinit var password: String
     lateinit var name: String
+    lateinit var createdAt: String
 }
