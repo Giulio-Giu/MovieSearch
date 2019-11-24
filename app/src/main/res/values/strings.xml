@@ -6,6 +6,7 @@
     <string name="PREF_PASSWORD">password</string>
     <string name="PREF_NAME">name</string>
     <string name="PREF_LIST_SEARCH">listSearch</string>
+    <string name="PREF_HISTORIC_SEARCH">historicSearch</string>
     <string name="USER">userAccount</string>
 
     <!-- SignInActivity e activity_sign_in -->

@@ -17,21 +17,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp">
-            <TextView
 
+            <TextView
                     android:id="@+id/tv_fragmentHome_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="20dp"
-                    app:fontFamily="@font/robotomedium"
                     android:gravity="center_horizontal"
                     android:text="@string/home_title"
                     android:textColor="@color/orange"
                     android:textSize="20sp"
+                    app:fontFamily="@font/robotomedium"
                     app:layout_constraintTop_toTopOf="parent"/>
 
             <EditText
@@ -40,9 +40,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="15dp"
                     android:hint="@string/home_movieSearchHint"
                     android:paddingStart="10dp"
                     android:paddingLeft="10dp"
@@ -55,9 +55,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="20dp"
                     android:background="@drawable/button_green"
                     android:text="@string/home_btn_search"
                     android:textAllCaps="false"
@@ -100,18 +100,19 @@
 
                 <TextView
                         android:id="@+id/tv_movie_title"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="30dp"
-                        app:fontFamily="@font/robotomedium"
                         android:text="@string/home_film_title"
                         android:textColor="@color/orange"
                         android:textSize="25sp"
+                        app:fontFamily="@font/robotomedium"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_movie_star"
                         app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
@@ -120,9 +121,9 @@
                         android:layout_height="28dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="37dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_marginTop="37dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/star"
                         app:layout_constraintEnd_toStartOf="@id/tv_movie_imdbRating"
@@ -135,9 +136,9 @@
                         android:layout_marginStart="1dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginTop="30dp"
-                        app:fontFamily="@font/robotomedium"
                         android:text="@string/home_film_imdb_rating"
                         android:textSize="20sp"
+                        app:fontFamily="@font/robotomedium"
                         app:layout_constraintEnd_toStartOf="@id/tv_movie_imdbRating_total"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -148,9 +149,9 @@
                         android:layout_marginTop="38dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_imdb_rating_total"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -159,9 +160,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="52dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_imdb_votes"
                         android:textSize="11sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="@id/tv_movie_imdbRating"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -172,9 +173,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_type"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
 
@@ -196,9 +197,9 @@
                         android:layout_marginStart="7dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="10dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_runtime"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toEndOf="@id/view_left_runtime"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
 
@@ -220,9 +221,9 @@
                         android:layout_marginStart="7dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="10dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_released"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toEndOf="@id/view_left_released"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
 
@@ -244,9 +245,9 @@
                         android:layout_marginStart="7dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="10dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_series_year"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toEndOf="@id/view_left_year"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
 
@@ -268,9 +269,9 @@
                         android:layout_marginStart="7dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="10dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_country"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toEndOf="@id/view_left_country"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
 
@@ -287,13 +288,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
                         android:paddingLeft="15dp"
+                        android:paddingEnd="15dp"
                         android:paddingRight="15dp"
                         android:text="@string/home_series_episodeGuide"
                         android:textSize="16sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_type"/>
 
@@ -301,13 +302,13 @@
                         android:id="@+id/tv_movie_totalSeasons"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:fontFamily="@font/robotoregular"
                         android:paddingStart="16dp"
-                        android:paddingEnd="16dp"
                         android:paddingLeft="16dp"
+                        android:paddingEnd="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/home_series_totalSeasons"
                         android:textSize="13sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_episodeGuide"/>
 
@@ -336,9 +337,9 @@
                         android:layout_height="270dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
                         app:layout_constraintTop_toBottomOf="@id/view_below_totalSeasons"/>
 
                 <TextView
@@ -347,14 +348,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginTop="10dp"
-                        app:fontFamily="@font/robotoregular"
                         android:gravity="center_horizontal"
                         android:paddingBottom="20dp"
                         android:text="@string/home_film_plot"
                         android:textSize="16sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/iv_movie_poster"/>
@@ -366,9 +367,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_movie_director_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_plot"/>
 
@@ -381,9 +382,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_movie_director"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_director_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_plot"/>
@@ -395,9 +396,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_movie_boxOffice_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_director"/>
 
@@ -410,9 +411,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_movie_boxOffice"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_boxOffice_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_director"/>
@@ -424,9 +425,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_movie_production_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_boxOffice"/>
 
@@ -439,9 +440,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_movie_production"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_production_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_boxOffice"/>
@@ -453,9 +454,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_genre_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_production"/>
 
@@ -468,9 +469,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_genre"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_genre_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_production"/>
@@ -483,9 +484,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_actors_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_genre"/>
 
@@ -498,9 +499,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_actors"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_actors_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_genre"/>
@@ -512,9 +513,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_writers_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_actors"/>
 
@@ -527,9 +528,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_writers"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_writers_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_actors"/>
@@ -541,9 +542,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_awards_title"
                         android:textSize="17sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_writers"/>
 
@@ -556,9 +557,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        app:fontFamily="@font/robotoregular"
                         android:text="@string/home_film_awards"
                         android:textSize="14sp"
+                        app:fontFamily="@font/robotoregular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/tv_movie_writers_title"
                         app:layout_constraintTop_toBottomOf="@id/tv_movie_writers"/>

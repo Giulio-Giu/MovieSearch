@@ -23,11 +23,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
-
-/**
- * A simple [Fragment] subclass.
- */
 class HomeFragment : Fragment() {
 
     val apiKey = "2f5cfd66"
@@ -49,6 +44,18 @@ class HomeFragment : Fragment() {
 
         tv_home_messageError.visibility = TextView.INVISIBLE
         constraint_home_result.visibility = ConstraintLayout.INVISIBLE
+
+        val shared = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
+        val historicSearch = shared.getString(getString(R.string.PREF_HISTORIC_SEARCH), "")
+
+        if (!historicSearch.isNullOrEmpty()) {
+            searchFilm(historicSearch)
+
+            //remover do shared para não fazer a pesquisa depois de sair entrar dnv no app
+            shared.edit()
+                .remove(getString(R.string.PREF_HISTORIC_SEARCH))
+                .apply()
+        }
 
         home_btn_search.setOnClickListener {
             if (et_movieSearchHint.text.toString().trim().isEmpty()) {
@@ -96,7 +103,7 @@ class HomeFragment : Fragment() {
                 response?.let {
                     if (it.body().Response.equals("true", ignoreCase = true)) {
                         constraint_home_result.visibility = ConstraintLayout.VISIBLE
-                        getItems(it.body(), contextActivity)
+                        getItems(it.body(), contextActivity, search)
                     } else {
                         Toast.makeText(
                             contextActivity,
@@ -117,13 +124,22 @@ class HomeFragment : Fragment() {
         })
     }
 
-    fun getItems(film: Film, contextActivity: HomeActivity) {
+    fun getItems(film: Film, contextActivity: HomeActivity, search: String) {
 
         val shared = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
 
-        val searchList = shared.getStringSet(getString(R.string.PREF_LIST_SEARCH), null)
+        var searchList: MutableSet<String>? = shared.getStringSet(getString(R.string.PREF_LIST_SEARCH), null)
 
-        searchList?.add(et_movieSearchHint.text.toString().trim())
+        if (searchList.isNullOrEmpty()) {
+            searchList = HashSet()
+            searchList.add(search)
+        } else {
+            searchList.add(search)
+        }
+
+        shared.edit()
+            .putStringSet(getString(R.string.PREF_LIST_SEARCH), searchList)
+            .apply()
 
         /**itens comuns*/
         tv_movie_title.text = film.Title

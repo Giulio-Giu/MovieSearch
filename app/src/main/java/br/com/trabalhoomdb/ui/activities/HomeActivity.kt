@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import br.com.trabalhoomdb.R
 import br.com.trabalhoomdb.ui.fragments.HistoricFragment
 import br.com.trabalhoomdb.ui.fragments.HomeFragment
+import br.com.trabalhoomdb.ui.fragments.ProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         btn_profile.setOnClickListener {
-            setFragment(HistoricFragment())
+            setFragment(ProfileFragment())
         }
     }
 

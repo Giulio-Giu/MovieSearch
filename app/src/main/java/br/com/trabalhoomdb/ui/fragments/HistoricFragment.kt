@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import br.com.trabalhoomdb.R
+import br.com.trabalhoomdb.ui.activities.HomeActivity
 import br.com.trabalhoomdb.ui.adapters.HistoricAdapter
 import kotlinx.android.synthetic.main.fragment_historic.*
 
@@ -26,19 +28,32 @@ class HistoricFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharedPreferences =
-            view.context.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
+        val contextActivity = context as HomeActivity
 
-        if (sharedPreferences.getStringSet(getString(R.string.PREF_LIST_SEARCH), null).isNullOrEmpty()) {
+        val sharedPreferences = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
+
+        val searchList = sharedPreferences.getStringSet(getString(R.string.PREF_LIST_SEARCH), null)
+
+        if (searchList.isNullOrEmpty()) {
             tv_fragmentHistoric_messageError.visibility = TextView.VISIBLE
             historic_recyclerView.visibility = RecyclerView.INVISIBLE
         } else {
             tv_fragmentHistoric_messageError.visibility = TextView.INVISIBLE
             historic_recyclerView.visibility = RecyclerView.VISIBLE
 
-            historic_recyclerView.adapter = HistoricAdapter(view.context, sharedPreferences.getStringSet(getString(R.string.PREF_LIST_SEARCH), null)!!.toList())
+            val adapter = HistoricAdapter(contextActivity, searchList.toList())
+
+            adapter.clickListener = object : HistoricAdapter.ClickListener{
+                override fun onClick(search: String) {
+                    sharedPreferences.edit()
+                        .putString(getString(R.string.PREF_HISTORIC_SEARCH), search)
+                        .apply()
+                    (activity as HomeActivity).setFragment(HomeFragment())
+                }
+            }
+
+            historic_recyclerView.adapter = adapter
+            historic_recyclerView.layoutManager = LinearLayoutManager(contextActivity)
         }
     }
-
-
 }
