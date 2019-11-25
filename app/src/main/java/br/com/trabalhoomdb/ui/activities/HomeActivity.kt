@@ -1,5 +1,6 @@
 package br.com.trabalhoomdb.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -31,5 +32,11 @@ class HomeActivity : AppCompatActivity() {
         ft.replace(R.id.frame_layout, f)
         ft.addToBackStack(null)
         ft.commit()
+    }
+
+    fun doLogout() {
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

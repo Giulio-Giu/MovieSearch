@@ -57,6 +57,11 @@ class HomeFragment : Fragment() {
                 .apply()
         }
 
+        if (et_movieSearchHint.text.toString().trim().isNotEmpty()) {
+            tv_home_messageError.visibility = TextView.INVISIBLE
+            searchFilm(et_movieSearchHint.text.toString().trim())
+        }
+
         home_btn_search.setOnClickListener {
             if (et_movieSearchHint.text.toString().trim().isEmpty()) {
                 tv_home_messageError.visibility = TextView.VISIBLE

@@ -3,8 +3,8 @@
 
     <string name="PREF_APP_NAME">MSI</string>
     <string name="PREF_EMAIL">email</string>
-    <string name="PREF_PASSWORD">password</string>
     <string name="PREF_NAME">name</string>
+    <string name="PREF_CREATEAT">createat</string>
     <string name="PREF_LIST_SEARCH">listSearch</string>
     <string name="PREF_HISTORIC_SEARCH">historicSearch</string>
     <string name="USER">userAccount</string>
@@ -31,9 +31,7 @@
 
     <!-- ForgotPasswordActivity e activity_forgot_password -->
     <string name="reset_password">Recover Password</string>
-    <string name="forgotPassword_message">If your email exists in our database, you will receive a link with
-        instructions to recover your password!
-    </string>
+    <string name="forgotPassword_message">If your email exists in our database, you will receive a new password!</string>
     <string name="btn_send">Send</string>
     <string name="error_email_empty">Email cannot be empty</string>
     <string name="ok">Okay</string>

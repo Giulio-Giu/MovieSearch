@@ -26,12 +26,12 @@ class SignInActivity : AppCompatActivity() {
         //verificando se tem usuário logado
         sharedPrefferencesGlobal = getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
 
-        if (sharedPrefferencesGlobal.getString(getString(R.string.PREF_EMAIL), "")!!.isNotEmpty()) {
+        if (!sharedPrefferencesGlobal.getString(getString(R.string.PREF_EMAIL), "").isNullOrEmpty()) {
 
             val user = Account()
             user.email = sharedPrefferencesGlobal.getString(getString(R.string.PREF_EMAIL), "")!!
-            user.password = sharedPrefferencesGlobal.getString(getString(R.string.PREF_PASSWORD), "")!!
             user.name = sharedPrefferencesGlobal.getString(getString(R.string.PREF_NAME), "")!!
+            user.createdAt = sharedPrefferencesGlobal.getString(getString(R.string.PREF_CREATEAT), "")!!
 
             gotoHome(true, user)
         }
@@ -97,8 +97,8 @@ class SignInActivity : AppCompatActivity() {
         if (!isLogged) {
             sharedPrefferencesGlobal.edit()
                 .putString(getString(R.string.PREF_EMAIL), et_signIn_email.text.toString().trim())
-                .putString(getString(R.string.PREF_PASSWORD), et_signIn_password.text.toString().trim())
                 .putString(getString(R.string.PREF_NAME), user.name)
+                .putString(getString(R.string.PREF_CREATEAT), user.createdAt)
                 .apply()
         }
 

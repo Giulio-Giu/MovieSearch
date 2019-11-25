@@ -69,14 +69,13 @@ class EpisodesFragment : Fragment() {
                 response?.let {
                     if (it.body().Response.equals("true", ignoreCase = true)) {
                         tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
-                        callAdater(it.body().Episodes)
+                        callAdapter(it.body().Episodes)
                     } else {
                         Toast.makeText(
                             contextActivity,
                             resources.getString(R.string.fragmentEpisode_message_error_searchResult),
                             Toast.LENGTH_LONG
                         ).show()
-                        fragmentEpisode_recyclerView.visibility = RecyclerView.INVISIBLE
                         tv_fragmentEpisode_messageError.visibility = TextView.VISIBLE
                         tv_fragmentEpisode_messageError.text =
                             resources.getString(R.string.fragmentEpisode_message_error_searchResult)
@@ -91,7 +90,7 @@ class EpisodesFragment : Fragment() {
         })
     }
 
-    fun callAdater(episodes: List<Episode>) {
+    fun callAdapter(episodes: List<Episode>) {
         val adapter = EpisodesAdapter(contextActivity, episodes)
         fragmentEpisode_recyclerView.adapter = adapter
         fragmentEpisode_recyclerView.layoutManager = LinearLayoutManager(contextActivity)
