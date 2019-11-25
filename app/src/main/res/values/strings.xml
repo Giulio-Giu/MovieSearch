@@ -104,10 +104,15 @@
     <string name="itemEpisode_rating">9.3</string>
 
     <!-- fragment_profile -->
+    <string name="fragmentProfile_title">Profile</string>
+    <string name="fragmentProfile_name">Name:</string>
     <string name="fragmentProfile_userName">Giulio Machado</string>
+    <string name="fragmentProfile_email">Email:</string>
     <string name="fragmentProfile_userEmail">g.98.machado@hotmail.com</string>
+    <string name="fragmentProfile_createAt">Create At:</string>
     <string name="fragmentProfile_userCreateAt">14/11/2019 19:42:29</string>
     <string name="fragmentProfile_historic">Historic</string>
+    <string name="fragmentProfile_logout">Logout</string>
 
     <!-- fragment_historic -->
     <string name="fragmentHistoric_title">Historic</string>
