@@ -8,7 +8,7 @@
         android:layout_marginBottom="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="@color/background_gray">
+        android:background="@color/orange">
 
     <TextView
             android:id="@+id/episode_number"
@@ -17,6 +17,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
             android:text="@string/itemEpisode_number"
             android:textSize="15sp"
             app:fontFamily="@font/robotoregular"
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:textColor="@color/white"
             android:text="@string/itemEpisode_title"
             android:textSize="16sp"
             app:fontFamily="@font/robotomedium"
@@ -53,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:text="@string/itemEpisode_rating"
+            android:textColor="@color/white"
             android:textSize="15sp"
             app:fontFamily="@font/robotoregular"
             app:layout_constraintEnd_toEndOf="parent"

@@ -11,6 +11,8 @@
     <color name="dark_gray">#8D8B8B</color>
     <color name="background_gray">#DADADA</color>
 
+    <color name="orange">#ff8234</color>
+
     <color name="blue">#0144A8</color>
 
     <color name="white">#ffffff</color>
@@ -28,11 +30,17 @@
     <color name="light_green">#52FF34</color>
     <color name="dark_green">#4AE82E</color>
 
+    <color name="light_blue">#0144A8</color>
+    <color name="dark_blue">#033681</color>
+
     <color name="light_red">#FF3434</color>
     <color name="dark_red">#E82E2E</color>
 
     <color name="light_purple">#7434FF</color>
     <color name="dark_purple">#662EE8</color>
+
+    <color name="light_orange">#ff8234</color>
+    <color name="dark_orange">#FF6B0E</color>
 
     <color name="transparent">#00000000</color>
 

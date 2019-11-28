@@ -12,7 +12,7 @@
             android:id="@+id/frame_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
+            android:background="@color/black"
             app:layout_constraintBottom_toTopOf="@id/line"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -39,20 +39,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/transparent"
+                android:background="@color/black"
                 android:src="@drawable/ic_home"/>
         <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="@color/gray"/>
+                android:background="@color/white"/>
 
         <ImageButton
                 android:id="@+id/btn_profile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/transparent"
-                android:src="@drawable/ic_profile"/>
+                android:background="@color/black"
+                android:src="@drawable/ic_profile_white"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
