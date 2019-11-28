@@ -42,8 +42,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
             .content(R.string.forgotPassword_message)
             .positiveText(R.string.ok)
             .onPositive { dialog, which -> finish() }
-//            .positiveColorRes(R.color.orange)
-            .titleColorRes(R.color.orange)
+//            .positiveColorRes(R.color.purple)
+            .titleColorRes(R.color.purple)
             .show()
     }
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/orange</color>
-    <color name="colorPrimaryDark">#CF4F01</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">@color/purple</color>
+    <color name="colorPrimaryDark">#4E23A5</color>
+    <color name="colorAccent">#E71663</color>
 
 
     <color name="textGrayUltraLight">#fcfcfc</color>
@@ -11,20 +11,28 @@
     <color name="dark_gray">#8D8B8B</color>
     <color name="background_gray">#DADADA</color>
 
+    <color name="blue">#0144A8</color>
+
     <color name="white">#ffffff</color>
 
     <color name="black">#000000</color>
 
-    <color name="orange">#FE6A00</color>
-    
-    <color name="light_red">#FD3C3C</color>
-    <color name="dark_red">#DA0202</color>
+    <color name="purple">#662EE8</color>
 
-    <color name="light_green">#5de61a</color>
-    <color name="dark_green">#39a801</color>
+    <!--<color name="light_green">#5de61a</color>-->
+    <!--<color name="dark_green">#39a801</color>-->
 
-    <color name="light_blue">#7eb6ff</color>
-    <color name="dark_blue">#5f87e7</color>
+    <!--<color name="light_red">#E61A1A</color>-->
+    <!--<color name="dark_red">#A80101</color>-->
+
+    <color name="light_green">#52FF34</color>
+    <color name="dark_green">#4AE82E</color>
+
+    <color name="light_red">#FF3434</color>
+    <color name="dark_red">#E82E2E</color>
+
+    <color name="light_purple">#7434FF</color>
+    <color name="dark_purple">#662EE8</color>
 
     <color name="transparent">#00000000</color>
 

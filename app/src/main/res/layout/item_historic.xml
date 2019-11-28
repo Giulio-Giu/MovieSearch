@@ -4,7 +4,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="1dp">
+        android:layout_marginBottom="10dp"
+        android:background="@color/background_gray">
 
     <View
             android:id="@+id/view_itemHistoric"
@@ -29,7 +30,7 @@
             app:fontFamily="@font/robotomedium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_itemHistoric"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
             android:id="@+id/ib_itemHistoric_arrow"
@@ -38,7 +39,7 @@
             android:background="@color/transparent"
             android:src="@drawable/ic_arrow_right"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_itemHistoric"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <View
             android:layout_width="0dp"

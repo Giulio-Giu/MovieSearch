@@ -92,7 +92,19 @@ class HomeFragment : Fragment() {
     }
 
     fun gotoEpisodeGuide() {
-        contextActivity.intent.putExtra("search", et_movieSearchHint.text.toString().trim())
+
+        contextActivity = context as HomeActivity
+
+        val shared = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
+
+        val search = shared.getString(getString(R.string.PREF_SEARCH), "")
+
+        if (search.isNullOrEmpty()) {
+            contextActivity.intent.putExtra(getString(R.string.PREF_SEARCH), et_movieSearchHint.text.toString().trim())
+        } else {
+            contextActivity.intent.putExtra(getString(R.string.PREF_SEARCH), search)
+        }
+
         (activity as HomeActivity).setFragment(EpisodesFragment())
     }
 
@@ -144,6 +156,7 @@ class HomeFragment : Fragment() {
 
         shared.edit()
             .putStringSet(getString(R.string.PREF_LIST_SEARCH), searchList)
+            .putString(getString(R.string.PREF_SEARCH), search)
             .apply()
 
         /**itens comuns*/

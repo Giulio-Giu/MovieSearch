@@ -15,7 +15,7 @@
             android:layout_height="200dp"
             android:background="@color/transparent"
             android:scaleType="centerCrop"
-            android:src="@drawable/msi_logo"
+            android:src="@drawable/logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

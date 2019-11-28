@@ -9,6 +9,7 @@ import android.view.ViewGroup
 
 import br.com.trabalhoomdb.R
 import br.com.trabalhoomdb.ui.activities.HomeActivity
+import com.afollestad.materialdialogs.MaterialDialog
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment() {
@@ -32,7 +33,7 @@ class ProfileFragment : Fragment() {
         tv_fragmentProfile_userEmail.text = shared.getString(getString(R.string.PREF_EMAIL), "")
         tv_fragmentProfile_userCreateAt.text = shared.getString(getString(R.string.PREF_CREATEAT), "")
 
-        tv_fragmentProfile_logout.setOnClickListener {
+        btn_fragmentProfile_logout.setOnClickListener {
             doLogout()
         }
 
@@ -46,12 +47,24 @@ class ProfileFragment : Fragment() {
 
         val shared = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
 
-        shared.edit().clear()
-            .apply()
+        MaterialDialog.Builder(contextActivity)
+            .title(R.string.fragmentProfile_logout_title)
+            .content(R.string.fragmentProfile_logout_message)
+            .negativeColorRes(R.color.dark_red)
+            .negativeText(R.string.fragmentProfile_logout_positiveButtonText)
+            .onNegative { dialog, which ->
 
-        (activity as HomeActivity).doLogout()
+                shared.edit().clear()
+                    .apply()
 
-        onDestroy()
+                (activity as HomeActivity).doLogout()
+
+                dialog.dismiss()
+
+                onDestroy()
+            }
+            .positiveText(R.string.fragmentProfile_logout_negativeButtonText)
+            .show()
     }
 
 

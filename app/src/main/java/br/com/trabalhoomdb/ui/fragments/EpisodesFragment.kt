@@ -44,7 +44,7 @@ class EpisodesFragment : Fragment() {
 
         contextActivity = context as HomeActivity
 
-        search = contextActivity.intent.getStringExtra("search")
+        search = contextActivity.intent.getStringExtra(getString(R.string.PREF_SEARCH))
 
         tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
 

@@ -5,6 +5,7 @@
     <string name="PREF_EMAIL">email</string>
     <string name="PREF_NAME">name</string>
     <string name="PREF_CREATEAT">createat</string>
+    <string name="PREF_SEARCH">search</string>
     <string name="PREF_LIST_SEARCH">listSearch</string>
     <string name="PREF_HISTORIC_SEARCH">historicSearch</string>
     <string name="USER">userAccount</string>
@@ -28,6 +29,7 @@
 
     <!-- activity_sign_up e activity_sign_in e activity_forgot_password -->
     <string name="btn_cancel">Cancel</string>
+    <string name="signUp_title">Sign Up</string>
 
     <!-- ForgotPasswordActivity e activity_forgot_password -->
     <string name="reset_password">Recover Password</string>
@@ -111,6 +113,10 @@
     <string name="fragmentProfile_userCreateAt">14/11/2019 19:42:29</string>
     <string name="fragmentProfile_historic">Historic</string>
     <string name="fragmentProfile_logout">Logout</string>
+    <string name="fragmentProfile_logout_title">Are you sure?</string>
+    <string name="fragmentProfile_logout_message">Are you sure you want to logout?</string>
+    <string name="fragmentProfile_logout_positiveButtonText">Logout</string>
+    <string name="fragmentProfile_logout_negativeButtonText">Cancel</string>
 
     <!-- fragment_historic -->
     <string name="fragmentHistoric_title">Historic</string>
