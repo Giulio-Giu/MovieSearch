@@ -9,12 +9,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 import br.com.trabalhoomdb.R
-import br.com.trabalhoomdb.models.omdb.Episode
-import br.com.trabalhoomdb.models.omdb.ResponseEpisodes
-import br.com.trabalhoomdb.services.omdb.RetrofitInitializerOmdb
+import br.com.trabalhoomdb.models.Episode
+import br.com.trabalhoomdb.models.ResponseEpisodes
+import br.com.trabalhoomdb.services.RetrofitInitializerOmdb
 import br.com.trabalhoomdb.ui.activities.HomeActivity
 import br.com.trabalhoomdb.ui.adapters.EpisodesAdapter
 import kotlinx.android.synthetic.main.fragment_episodes.*
@@ -22,12 +21,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-/**
- * A simple [Fragment] subclass.
- */
 class EpisodesFragment : Fragment() {
 
-    val apiKey = "2f5cfd66"
+    private val apiKey = "2f5cfd66"
     lateinit var search: String
     lateinit var contextActivity: HomeActivity
 
@@ -35,7 +31,6 @@ class EpisodesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_episodes, container, false)
     }
 
@@ -48,10 +43,14 @@ class EpisodesFragment : Fragment() {
 
         tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
 
+        listEpisodes("1")
+        et_fragmentEpisode_seasonSearch.setText("1")
+
         fragmentEpisode_btn_search.setOnClickListener {
             if (et_fragmentEpisode_seasonSearch.text.toString().trim().isEmpty()) {
                 tv_fragmentEpisode_messageError.visibility = TextView.VISIBLE
-                tv_fragmentEpisode_messageError.text = resources.getString(R.string.fragmentEpisode_message_error_seasonNumberField)
+                tv_fragmentEpisode_messageError.text =
+                    resources.getString(R.string.fragmentEpisode_message_error_seasonNumberField)
             } else {
                 tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
                 listEpisodes(et_fragmentEpisode_seasonSearch.text.toString().trim())
@@ -59,13 +58,16 @@ class EpisodesFragment : Fragment() {
         }
     }
 
-    fun listEpisodes(season: String) {
-        val e = RetrofitInitializerOmdb().serviceOmdb()
+    private fun listEpisodes(season: String) {
+        val e = RetrofitInitializerOmdb(contextActivity).serviceOmdb()
 
         val call = e.listEpisodes(search, season, apiKey)
 
         call.enqueue(object : Callback<ResponseEpisodes> {
-            override fun onResponse(call: Call<ResponseEpisodes>?, response: Response<ResponseEpisodes>?) {
+            override fun onResponse(
+                call: Call<ResponseEpisodes>?,
+                response: Response<ResponseEpisodes>?
+            ) {
                 response?.let {
                     if (it.body().Response.equals("true", ignoreCase = true)) {
                         tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
@@ -84,7 +86,11 @@ class EpisodesFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<ResponseEpisodes>?, t: Throwable?) {
-                Toast.makeText(contextActivity, getString(R.string.fragmentEpisode_message_failure_enqueue), Toast.LENGTH_LONG)
+                Toast.makeText(
+                    contextActivity,
+                    getString(R.string.fragmentEpisode_message_failure_enqueue),
+                    Toast.LENGTH_LONG
+                )
                     .show()
             }
         })

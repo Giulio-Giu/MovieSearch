@@ -1,4 +1,4 @@
 # MovieSearch
-A movie searching
+Aplicativo criado para realização de um trabalho na disciplina no curso de Sistemas de Informação.
 
-testando
+Esse aplicativo consome uma API da OMDB sobre avaliações, sinopses entre outras informações de séries, filmes e etc.

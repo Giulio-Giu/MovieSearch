@@ -2,43 +2,15 @@
     <string name="app_name">MSI API</string>
 
     <string name="PREF_APP_NAME">MSI</string>
-    <string name="PREF_EMAIL">email</string>
-    <string name="PREF_NAME">name</string>
-    <string name="PREF_CREATEAT">createat</string>
     <string name="PREF_SEARCH">search</string>
     <string name="PREF_LIST_SEARCH">listSearch</string>
     <string name="PREF_HISTORIC_SEARCH">historicSearch</string>
-    <string name="USER">userAccount</string>
 
-    <!-- SignInActivity e activity_sign_in -->
-    <string name="btn_signIn">Sign In</string>
-    <string name="forgot_password">Forgot my password</string>
-    <string name="wrong_credentials">Wrong Credentials!</string>
-
-    <!-- SignUpActivity e activity_sign_up -->
-    <string name="confirmPassword">Confirm Password</string>
-    <string name="error_passwords">Passwords do not match</string>
-    <string name="error_data">Invalid data!</string>
-
-    <!-- activity_sign_up e activity_sign_in -->
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="title">Movies/Series Info</string>
-    <string name="btn_signUp">Sign Up</string>
-
-    <!-- activity_sign_up e activity_sign_in e activity_forgot_password -->
-    <string name="btn_cancel">Cancel</string>
-    <string name="signUp_title">Sign Up</string>
-
-    <!-- ForgotPasswordActivity e activity_forgot_password -->
-    <string name="reset_password">Recover Password</string>
-    <string name="forgotPassword_message">If your email exists in our database, you will receive a new password!</string>
-    <string name="btn_send">Send</string>
-    <string name="error_email_empty">Email cannot be empty</string>
-    <string name="ok">Okay</string>
+    <string name="service_baseUrl">http://www.omdbapi.com/</string>
 
     <!-- fragment_home -->
+    <string name="home_default_search">avengers endgame</string>
+
     <string name="home_title">Movies/Series Info</string>
     <string name="home_message_error_searchField">Search field cannot be empty</string>
     <string name="home_message_error_searchResult">Your search returned no results</string>
@@ -78,7 +50,7 @@
     <string name="home_film_type">Series</string>
 
     <string name="home_series_year">2004-2010</string>
-    <string name="home_series_episodeGuide">Episode Guide</string>
+    <string name="home_series_seasonGuide">Season Guide</string>
     <string name="home_series_totalSeasons">6 seasons</string>
 
     <string name="home_movie_director_title">Director:</string>
@@ -103,24 +75,10 @@
     <string name="itemEpisode_title">What Happened and What\'s Going On</string>
     <string name="itemEpisode_rating">9.3</string>
 
-    <!-- fragment_profile -->
-    <string name="fragmentProfile_title">Profile</string>
-    <string name="fragmentProfile_name">Name:</string>
-    <string name="fragmentProfile_userName">Giulio Machado</string>
-    <string name="fragmentProfile_email">Email:</string>
-    <string name="fragmentProfile_userEmail">g.98.machado@hotmail.com</string>
-    <string name="fragmentProfile_createAt">Create At:</string>
-    <string name="fragmentProfile_userCreateAt">14/11/2019 19:42:29</string>
-    <string name="fragmentProfile_historic">Historic</string>
-    <string name="fragmentProfile_logout">Logout</string>
-    <string name="fragmentProfile_logout_title">Are you sure?</string>
-    <string name="fragmentProfile_logout_message">Are you sure you want to logout?</string>
-    <string name="fragmentProfile_logout_positiveButtonText">Logout</string>
-    <string name="fragmentProfile_logout_negativeButtonText">Cancel</string>
-
     <!-- fragment_historic -->
     <string name="fragmentHistoric_title">Historic</string>
     <string name="fragmentHistoric_message_error">You haven\'t done any research yet!</string>
+    <string name="btn_clear">Clear</string>
 
     <!-- item_historic -->
     <string name="itemHistoric_search">Lost</string>

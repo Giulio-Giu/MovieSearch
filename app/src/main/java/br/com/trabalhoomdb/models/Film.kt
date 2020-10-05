@@ -1,4 +1,4 @@
-package br.com.trabalhoomdb.models.omdb
+package br.com.trabalhoomdb.models
 
 data class Film(
     var Title: String,

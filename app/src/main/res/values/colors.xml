@@ -4,7 +4,6 @@
     <color name="colorPrimaryDark">#4E23A5</color>
     <color name="colorAccent">#E71663</color>
 
-
     <color name="textGrayUltraLight">#fcfcfc</color>
     <color name="lightgray">#fafafa</color>
     <color name="gray">#b3b3b3</color>
@@ -20,12 +19,6 @@
     <color name="black">#000000</color>
 
     <color name="purple">#662EE8</color>
-
-    <!--<color name="light_green">#5de61a</color>-->
-    <!--<color name="dark_green">#39a801</color>-->
-
-    <!--<color name="light_red">#E61A1A</color>-->
-    <!--<color name="dark_red">#A80101</color>-->
 
     <color name="light_green">#52FF34</color>
     <color name="dark_green">#4AE82E</color>

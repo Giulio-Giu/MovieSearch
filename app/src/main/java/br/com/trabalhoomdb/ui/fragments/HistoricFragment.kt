@@ -30,7 +30,10 @@ class HistoricFragment : Fragment() {
 
         val contextActivity = context as HomeActivity
 
-        val sharedPreferences = contextActivity.getSharedPreferences(getString(R.string.PREF_APP_NAME), Context.MODE_PRIVATE)
+        val sharedPreferences = contextActivity.getSharedPreferences(
+            getString(R.string.PREF_APP_NAME),
+            Context.MODE_PRIVATE
+        )
 
         val searchList = sharedPreferences.getStringSet(getString(R.string.PREF_LIST_SEARCH), null)
 
@@ -43,7 +46,7 @@ class HistoricFragment : Fragment() {
 
             val adapter = HistoricAdapter(contextActivity, searchList.toList())
 
-            adapter.clickListener = object : HistoricAdapter.ClickListener{
+            adapter.clickListener = object : HistoricAdapter.ClickListener {
                 override fun onClick(search: String) {
                     sharedPreferences.edit()
                         .putString(getString(R.string.PREF_HISTORIC_SEARCH), search)
@@ -54,6 +57,14 @@ class HistoricFragment : Fragment() {
 
             historic_recyclerView.adapter = adapter
             historic_recyclerView.layoutManager = LinearLayoutManager(contextActivity)
+
+            btn_fragmentHistoric_clear.setOnClickListener {
+                sharedPreferences.edit().putStringSet(getString(R.string.PREF_LIST_SEARCH), null)
+                    .apply()
+
+                tv_fragmentHistoric_messageError.visibility = TextView.VISIBLE
+                historic_recyclerView.visibility = RecyclerView.INVISIBLE
+            }
         }
     }
 }

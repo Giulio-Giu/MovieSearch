@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.trabalhoomdb.R
 
-class HistoricAdapter (private val context: Context, private val list: List<String>) : RecyclerView.Adapter<HistoricAdapter.ViewHolder>() {
+class HistoricAdapter(private val context: Context, private val list: List<String>) :
+    RecyclerView.Adapter<HistoricAdapter.ViewHolder>() {
 
     lateinit var clickListener: ClickListener
 

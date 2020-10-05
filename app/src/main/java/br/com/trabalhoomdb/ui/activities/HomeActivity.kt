@@ -1,13 +1,11 @@
 package br.com.trabalhoomdb.ui.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import br.com.trabalhoomdb.R
 import br.com.trabalhoomdb.ui.fragments.HistoricFragment
 import br.com.trabalhoomdb.ui.fragments.HomeFragment
-import br.com.trabalhoomdb.ui.fragments.ProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -22,21 +20,21 @@ class HomeActivity : AppCompatActivity() {
             setFragment(HomeFragment())
         }
 
-        btn_profile.setOnClickListener {
-            setFragment(ProfileFragment())
+        btn_historic.setOnClickListener {
+            setFragment(HistoricFragment())
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (supportFragmentManager.backStackEntryCount == 0)
+            finish()
     }
 
     fun setFragment(f: Fragment) {
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.frame_layout, f)
-        ft.addToBackStack(null)
+//        ft.addToBackStack(null)
         ft.commit()
-    }
-
-    fun doLogout() {
-        val intent = Intent(this, SignInActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 }

@@ -1,4 +1,4 @@
-package br.com.trabalhoomdb.models.omdb
+package br.com.trabalhoomdb.models
 
 data class Episode(
     var Title: String,

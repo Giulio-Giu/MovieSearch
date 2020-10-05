@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.trabalhoomdb.R
-import br.com.trabalhoomdb.models.omdb.Episode
+import br.com.trabalhoomdb.models.Episode
 
-class EpisodesAdapter (private val context: Context, private val list: List<Episode>) : RecyclerView.Adapter<EpisodesAdapter.ViewHolder>() {
+class EpisodesAdapter(private val context: Context, private val list: List<Episode>) :
+    RecyclerView.Adapter<EpisodesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_episode, parent, false)
