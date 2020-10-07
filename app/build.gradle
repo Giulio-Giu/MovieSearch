@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storePassword '512EF94B-5F92-47FF-9CAE-3E0E2999B305'
+            keyAlias 'moviesearch'
+            keyPassword '512EF94B-5F92-47FF-9CAE-3E0E2999B305'
+            storeFile file('C:\\Users\\g98ma\\Desktop\\GitHub\\MovieSearch\\keystore_moviesearch.jks')
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
     defaultConfig {
@@ -12,8 +20,9 @@ android {
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName '1.0.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
     buildTypes {
         release {
