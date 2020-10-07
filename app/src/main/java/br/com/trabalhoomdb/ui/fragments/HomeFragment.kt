@@ -4,9 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView.OnEditorActionListener
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.com.trabalhoomdb.R
@@ -20,6 +23,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 import kotlin.collections.HashSet
+
 
 class HomeFragment : Fragment() {
 
@@ -42,7 +46,6 @@ class HomeFragment : Fragment() {
         tv_home_messageError.visibility = View.INVISIBLE
         constraint_home_result.visibility = View.INVISIBLE
 
-        searchFilm(getString(R.string.home_default_search), true)
 
         val shared = contextActivity.getSharedPreferences(
             getString(R.string.PREF_APP_NAME),
@@ -58,6 +61,8 @@ class HomeFragment : Fragment() {
 //            shared.edit()
 //                .remove(getString(R.string.PREF_HISTORIC_SEARCH))
 //                .apply()
+        } else {
+            searchFilm(getString(R.string.home_default_search), true)
         }
 
         if (et_movieSearchHint.text.toString().trim().isNotEmpty()) {
@@ -66,14 +71,19 @@ class HomeFragment : Fragment() {
         }
 
         home_btn_search.setOnClickListener {
-            if (et_movieSearchHint.text.toString().trim().isEmpty()) {
-                tv_home_messageError.visibility = View.VISIBLE
-                tv_home_messageError.text =
-                    resources.getString(R.string.home_message_error_searchField)
-            } else {
-                tv_home_messageError.visibility = View.INVISIBLE
-                searchFilm(et_movieSearchHint.text.toString().trim(), false)
+            callSearchFilm()
+        }
+
+        et_movieSearchHint.setOnEditorActionListener { _, actionId, event ->
+            if ((event != null && event.keyCode == KeyEvent.KEYCODE_ENTER) ||
+                actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH ||
+                actionId == EditorInfo.IME_ACTION_NEXT || actionId == EditorInfo.IME_ACTION_GO
+            ) {
+                //do what you want on the press of 'done'
+                callSearchFilm()
+                (activity as HomeActivity).hideSoftKeyboard(contextActivity)
             }
+            false
         }
 
         iv_movie_poster.setOnClickListener {
@@ -116,6 +126,19 @@ class HomeFragment : Fragment() {
         }
 
         (activity as HomeActivity).setFragment(EpisodesFragment())
+    }
+
+    private fun callSearchFilm() {
+        if (et_movieSearchHint.text.toString().trim().isEmpty()) {
+            constraint_home_result.visibility = View.GONE
+            tv_home_messageError.visibility = View.VISIBLE
+            tv_home_messageError.text =
+                resources.getString(R.string.home_message_error_searchField)
+        } else {
+            tv_home_messageError.visibility = View.GONE
+            constraint_home_result.visibility = View.VISIBLE
+            searchFilm(et_movieSearchHint.text.toString().trim(), false)
+        }
     }
 
     private fun searchFilm(search: String, isInitial: Boolean) {

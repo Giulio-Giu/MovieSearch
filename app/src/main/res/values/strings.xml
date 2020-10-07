@@ -11,7 +11,7 @@
     <!-- fragment_home -->
     <string name="home_default_search">avengers endgame</string>
 
-    <string name="home_title">Movies/Series Info</string>
+    <string name="home_title">Movies &amp; Series Info</string>
     <string name="home_message_error_searchField">Search field cannot be empty</string>
     <string name="home_message_error_searchResult">Your search returned no results</string>
     <string name="home_message_failure_enqueue">Get some error</string>
@@ -78,7 +78,7 @@
     <!-- fragment_historic -->
     <string name="fragmentHistoric_title">Historic</string>
     <string name="fragmentHistoric_message_error">You haven\'t done any research yet!</string>
-    <string name="btn_clear">Clear</string>
+    <string name="btn_clear_all">Clear All</string>
 
     <!-- item_historic -->
     <string name="itemHistoric_search">Lost</string>

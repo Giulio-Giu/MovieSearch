@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:background="@color/background_gray"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:background="@color/orange">
+        android:paddingBottom="10dp">
 
     <TextView
             android:id="@+id/episode_number"
@@ -17,12 +16,11 @@
             android:layout_gravity="center_vertical"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="20dp"
-            android:textColor="@color/white"
             android:text="@string/itemEpisode_number"
             android:textSize="15sp"
-            app:fontFamily="@font/robotoregular"
+            app:fontFamily="@font/roboto_regular"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/episode_title"
@@ -30,13 +28,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:textColor="@color/white"
             android:text="@string/itemEpisode_title"
             android:textSize="16sp"
-            app:fontFamily="@font/robotomedium"
+            app:fontFamily="@font/roboto_medium"
             app:layout_constraintEnd_toStartOf="@id/item_episode_star"
             app:layout_constraintStart_toEndOf="@id/episode_number"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
             android:id="@+id/item_episode_star"
@@ -47,7 +44,7 @@
             android:layout_marginRight="3dp"
             android:src="@drawable/star"
             app:layout_constraintEnd_toStartOf="@id/episode_rating"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/episode_rating"
@@ -55,10 +52,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:text="@string/itemEpisode_rating"
-            android:textColor="@color/white"
             android:textSize="15sp"
-            app:fontFamily="@font/robotoregular"
+            app:fontFamily="@font/roboto_regular"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

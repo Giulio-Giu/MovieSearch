@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/white"
         tools:context=".ui.fragments.EpisodesFragment">
 
-    <View android:layout_width="wrap_content"
-          android:layout_height="70dp"
-          app:layout_constraintEnd_toEndOf="parent"
-          android:background="@color/orange"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"/>
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:background="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/tv_fragmentEpisode_title"
@@ -24,29 +24,28 @@
             android:text="@string/fragmentEpisode_title"
             android:textColor="@color/white"
             android:textSize="25sp"
-            app:fontFamily="@font/robotomedium"
+            app:fontFamily="@font/roboto_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
             android:id="@+id/et_fragmentEpisode_seasonSearch"
-            android:layout_width="152dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/white"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:textColorHint="@color/white"
             android:hint="@string/fragmentEpisode_seasonSearch_hint"
+            android:singleLine="true"
             android:textSize="14sp"
-            app:fontFamily="@font/robotoregular"
+            app:fontFamily="@font/roboto_regular"
             app:layout_constraintEnd_toStartOf="@id/fragmentEpisode_btn_search"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_fragmentEpisode_title"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_fragmentEpisode_title" />
 
     <TextView
             android:id="@+id/tv_fragmentEpisode_messageError"
@@ -57,30 +56,30 @@
             android:textColor="@color/light_red"
             android:textSize="18sp"
             android:visibility="invisible"
-            app:fontFamily="@font/robotomedium"
+            app:fontFamily="@font/roboto_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentEpisode_btn_search"/>
+            app:layout_constraintTop_toBottomOf="@id/fragmentEpisode_btn_search" />
 
     <Button
             android:id="@+id/fragmentEpisode_btn_search"
-            android:layout_width="140dp"
-            android:layout_height="29dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="48dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/button_purple"
             android:text="@string/fragmentEpisode_btn_search"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="14sp"
-            app:fontFamily="@font/robotoregular"
+            app:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="@id/et_fragmentEpisode_seasonSearch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@id/et_fragmentEpisode_seasonSearch"
-            app:layout_constraintTop_toBottomOf="@id/tv_fragmentEpisode_title"/>
+            app:layout_constraintTop_toTopOf="@id/et_fragmentEpisode_seasonSearch" />
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fragmentEpisode_recyclerView"
@@ -94,6 +93,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_fragmentEpisode_seasonSearch"/>
+            app:layout_constraintTop_toBottomOf="@id/et_fragmentEpisode_seasonSearch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

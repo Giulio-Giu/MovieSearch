@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -12,7 +11,7 @@
             android:id="@+id/frame_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/black"
+            android:background="@color/white"
             app:layout_constraintBottom_toTopOf="@id/line"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -24,7 +23,7 @@
             android:layout_height="1dp"
             android:background="@color/gray"
             app:layout_constraintBottom_toTopOf="@id/navbar"
-            app:layout_constraintTop_toBottomOf="@id/frame_layout"/>
+            app:layout_constraintTop_toBottomOf="@id/frame_layout" />
 
     <LinearLayout
             android:id="@+id/navbar"
@@ -39,20 +38,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:src="@drawable/ic_home_white"/>
+                android:background="@color/transparent"
+                android:src="@drawable/ic_home_black" />
+
         <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="@color/white"/>
+                android:background="@color/gray" />
 
         <ImageButton
                 android:id="@+id/btn_historic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:src="@drawable/ic_search_white"/>
+                android:background="@color/transparent"
+                android:src="@drawable/ic_search_black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,12 @@
 package br.com.trabalhoomdb.ui.fragments
 
-
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 
@@ -24,7 +24,7 @@ import retrofit2.Response
 class EpisodesFragment : Fragment() {
 
     private val apiKey = "2f5cfd66"
-    lateinit var search: String
+    private lateinit var search: String
     lateinit var contextActivity: HomeActivity
 
     override fun onCreateView(
@@ -39,22 +39,40 @@ class EpisodesFragment : Fragment() {
 
         contextActivity = context as HomeActivity
 
-        search = contextActivity.intent.getStringExtra(getString(R.string.PREF_SEARCH))
+        search = contextActivity.intent.getStringExtra(getString(R.string.PREF_SEARCH)) ?: ""
 
-        tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
+        tv_fragmentEpisode_messageError.visibility = View.GONE
 
         listEpisodes("1")
         et_fragmentEpisode_seasonSearch.setText("1")
 
         fragmentEpisode_btn_search.setOnClickListener {
-            if (et_fragmentEpisode_seasonSearch.text.toString().trim().isEmpty()) {
-                tv_fragmentEpisode_messageError.visibility = TextView.VISIBLE
-                tv_fragmentEpisode_messageError.text =
-                    resources.getString(R.string.fragmentEpisode_message_error_seasonNumberField)
-            } else {
-                tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
-                listEpisodes(et_fragmentEpisode_seasonSearch.text.toString().trim())
+            callListEpisodes()
+        }
+
+        et_fragmentEpisode_seasonSearch.setOnEditorActionListener { _, actionId, event ->
+            if ((event != null && event.keyCode == KeyEvent.KEYCODE_ENTER) ||
+                actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH ||
+                actionId == EditorInfo.IME_ACTION_NEXT || actionId == EditorInfo.IME_ACTION_GO
+            ) {
+                //do what you want on the press of 'done'
+                callListEpisodes()
+                (activity as HomeActivity).hideSoftKeyboard(contextActivity)
             }
+            false
+        }
+    }
+
+    private fun callListEpisodes() {
+        if (et_fragmentEpisode_seasonSearch.text.toString().trim().isEmpty()) {
+            tv_fragmentEpisode_messageError.visibility = View.VISIBLE
+            fragmentEpisode_recyclerView.visibility = View.GONE
+            tv_fragmentEpisode_messageError.text =
+                resources.getString(R.string.fragmentEpisode_message_error_seasonNumberField)
+        } else {
+            tv_fragmentEpisode_messageError.visibility = View.GONE
+            fragmentEpisode_recyclerView.visibility = View.VISIBLE
+            listEpisodes(et_fragmentEpisode_seasonSearch.text.toString().trim())
         }
     }
 
@@ -70,7 +88,8 @@ class EpisodesFragment : Fragment() {
             ) {
                 response?.let {
                     if (it.body().Response.equals("true", ignoreCase = true)) {
-                        tv_fragmentEpisode_messageError.visibility = TextView.INVISIBLE
+                        tv_fragmentEpisode_messageError.visibility = View.GONE
+                        fragmentEpisode_recyclerView.visibility = View.VISIBLE
                         callAdapter(it.body().Episodes)
                     } else {
                         Toast.makeText(
@@ -78,7 +97,8 @@ class EpisodesFragment : Fragment() {
                             resources.getString(R.string.fragmentEpisode_message_error_searchResult),
                             Toast.LENGTH_LONG
                         ).show()
-                        tv_fragmentEpisode_messageError.visibility = TextView.VISIBLE
+                        tv_fragmentEpisode_messageError.visibility = View.VISIBLE
+                        fragmentEpisode_recyclerView.visibility = View.GONE
                         tv_fragmentEpisode_messageError.text =
                             resources.getString(R.string.fragmentEpisode_message_error_searchResult)
                     }

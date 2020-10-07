@@ -4,13 +4,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/white"
         tools:context=".ui.fragments.HistoricFragment">
 
     <View
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:background="@color/orange"
+            android:background="@color/purple"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
             android:text="@string/fragmentHistoric_title"
             android:textColor="@color/white"
             android:textSize="25sp"
-            app:fontFamily="@font/robotomedium"
+            app:fontFamily="@font/roboto_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,10 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="@string/fragmentHistoric_message_error"
-            android:textColor="@color/white"
             android:textSize="20sp"
             android:visibility="invisible"
-            app:fontFamily="@font/robotomedium"
+            app:fontFamily="@font/roboto_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_fragmentHistoric_title" />
@@ -59,10 +58,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/button_red"
             android:paddingHorizontal="25dp"
             android:paddingVertical="15dp"
-            android:text="@string/btn_clear"
+            android:text="@string/btn_clear_all"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
