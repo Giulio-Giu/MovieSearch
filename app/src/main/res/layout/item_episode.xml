@@ -42,6 +42,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
+            android:contentDescription="@string/content_description_star"
             android:src="@drawable/star"
             app:layout_constraintEnd_toStartOf="@id/episode_rating"
             app:layout_constraintTop_toTopOf="parent" />

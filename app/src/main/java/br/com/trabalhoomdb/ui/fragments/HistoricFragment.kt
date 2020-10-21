@@ -51,6 +51,7 @@ class HistoricFragment : Fragment() {
                     sharedPreferences.edit()
                         .putString(getString(R.string.PREF_HISTORIC_SEARCH), search)
                         .apply()
+                    contextActivity.intent.putExtra(getString(R.string.PREF_HISTORIC_SEARCH), search)
                     (activity as HomeActivity).setFragment(HomeFragment())
                 }
             }

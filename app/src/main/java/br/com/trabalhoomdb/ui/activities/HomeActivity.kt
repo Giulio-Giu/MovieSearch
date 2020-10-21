@@ -14,12 +14,12 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 
+    var clickHome = false
+    var clickHistoric = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        var clickHome = false
-        var clickHistoric = false
 
         val sharedPreferences = getSharedPreferences(
             getString(R.string.PREF_APP_NAME),

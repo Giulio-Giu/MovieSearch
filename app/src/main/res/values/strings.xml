@@ -11,6 +11,8 @@
     <!-- fragment_home -->
     <string name="home_default_search">avengers endgame</string>
 
+    <string name="seasons_count">%1$s seasons</string>
+
     <string name="home_title">Movies &amp; Series Info</string>
     <string name="home_message_error_searchField">Search field cannot be empty</string>
     <string name="home_message_error_searchResult">Your search returned no results</string>
@@ -49,7 +51,7 @@
     <string name="home_film_imdb_votes">464,567</string>
     <string name="home_film_type">Series</string>
 
-    <string name="home_series_year">2004-2010</string>
+    <string name="home_series_year">2004–2010</string>
     <string name="home_series_seasonGuide">Season Guide</string>
     <string name="home_series_totalSeasons">6 seasons</string>
 
@@ -82,5 +84,11 @@
 
     <!-- item_historic -->
     <string name="itemHistoric_search">Lost</string>
+    <string name="content_description_logo">Logo with Movies Series Info text</string>
+    <string name="content_description_home">Button Home</string>
+    <string name="content_description_historic">Button Historic</string>
+    <string name="content_description_star">Star</string>
+    <string name="content_description_arrow">Arrow</string>
+    <string name="content_description_poster">Poster</string>
 
 </resources>

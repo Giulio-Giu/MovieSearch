@@ -36,6 +36,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@color/transparent"
+            android:contentDescription="@string/content_description_arrow"
             android:src="@drawable/ic_arrow_right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

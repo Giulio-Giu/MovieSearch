@@ -29,7 +29,7 @@
             android:id="@+id/navbar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@color/lightgray"
+            android:background="@color/light_gray"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent">
 
@@ -39,6 +39,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/transparent"
+                android:contentDescription="@string/content_description_home"
                 android:src="@drawable/ic_home_black" />
 
         <View
@@ -52,6 +53,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/transparent"
+                android:contentDescription="@string/content_description_historic"
                 android:src="@drawable/ic_search_black" />
     </LinearLayout>
 

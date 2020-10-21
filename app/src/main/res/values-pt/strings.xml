@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">MSI API</string>
+
+    <string name="PREF_APP_NAME">MSI</string>
+    <string name="PREF_SEARCH">search</string>
+    <string name="PREF_LIST_SEARCH">listSearch</string>
+    <string name="PREF_HISTORIC_SEARCH">historicSearch</string>
+
+    <string name="service_baseUrl">http://www.omdbapi.com/</string>
+
+    <!-- fragment_home -->
+    <string name="home_default_search">avengers endgame</string>
+
+    <string name="seasons_count">%1$s temporadas</string>
+
+    <string name="home_title">Filmes &amp; Séries Info</string>
+    <string name="home_message_error_searchField">Texto não pode estar vazio!</string>
+    <string name="home_message_error_searchResult">A sua não pesquisa não teve resultados!</string>
+    <string name="home_message_failure_enqueue">Ops, um erro aconteceu.</string>
+
+    <string name="home_movieSearchHint">Digite o nome do filme ou da série(em inglês)</string>
+    <string name="home_btn_search">Pesquisar</string>
+
+    <string name="home_film_title">Lost</string>
+    <string name="home_film_released">22 Sep 2004</string>
+    <string name="home_film_runtime">44 min</string>
+
+    <string name="home_film_genre_title">Gênero:</string>
+    <string name="home_film_genre">Adventure, Drama, Fantasy, Mystery, Sci-Fi, Thriller</string>
+
+    <string name="home_film_writers_title">Escritores:</string>
+    <string name="home_film_writers">J.J. Abrams, Jeffrey Lieber, Damon Lindelof</string>
+
+    <string name="home_film_actors_title">Atores:</string>
+    <string name="home_film_actors">Jorge Garcia, Josh Holloway, Yunjin Kim, Evangeline Lilly</string>
+
+    <string name="home_film_plot">The survivors of a plane crash are forced to work together in order to survive on a
+        seemingly deserted tropical island.
+    </string>
+    <string name="home_film_country">USA</string>
+
+    <string name="home_film_awards_title">Premiações:</string>
+    <string name="home_film_awards">Won 1 Golden Globe. Another 105 wins &amp; 376 nominations.</string>
+
+    <string name="home_film_rating_source">Internet Movie Database</string>
+    <string name="home_film_rating_value">8.3/10</string>
+
+    <string name="home_film_imdb_rating_total">/10</string>
+    <string name="home_film_imdb_rating">8.3</string>
+    <string name="home_film_imdb_votes">464,567</string>
+    <string name="home_film_type">Series</string>
+
+    <string name="home_series_year">2004–2010</string>
+    <string name="home_series_seasonGuide">Guia de Temporadas</string>
+    <string name="home_series_totalSeasons">6 seasons</string>
+
+    <string name="home_movie_director_title">Diretor:</string>
+    <string name="home_movie_director">Josh Whedon</string>
+
+    <string name="home_movie_boxOffice_title">Bilheteria:</string>
+    <string name="home_movie_boxOffice">$623,279,547</string>
+
+    <string name="home_movie_production_title">Produção:</string>
+    <string name="home_movie_production">Walt Disney Pictures</string>
+
+    <!-- fragment_episodes -->
+    <string name="fragmentEpisode_title">Lista de Episódios:</string>
+    <string name="fragmentEpisode_seasonSearch_hint">Digite o número de uma temporada</string>
+    <string name="fragmentEpisode_btn_search">Pesquisar Episódios</string>
+    <string name="fragmentEpisode_message_error_seasonNumberField">Texto não pode estar vazio</string>
+    <string name="fragmentEpisode_message_error_searchResult">A sua pesquisa não teve resultados!</string>
+    <string name="fragmentEpisode_message_failure_enqueue">Ops, um erro aconteceu.</string>
+
+    <!-- item_episode -->
+    <string name="itemEpisode_number">40:</string>
+    <string name="itemEpisode_title">What Happened and What\'s Going On</string>
+    <string name="itemEpisode_rating">9.3</string>
+
+    <!-- fragment_historic -->
+    <string name="fragmentHistoric_title">Histórico</string>
+    <string name="fragmentHistoric_message_error">Você ainda não realizou nenhuma pesquisa!</string>
+    <string name="btn_clear_all">Apagar tudo</string>
+
+    <!-- item_historic -->
+    <string name="itemHistoric_search">Lost</string>
+
+    <!-- content description -->
+    <string name="content_description_logo">Logo com o texto Movies Series Info</string>
+    <string name="content_description_home">Botão Inicial</string>
+    <string name="content_description_historic">Botão histórico</string>
+    <string name="content_description_star">Strela</string>
+    <string name="content_description_arrow">Seta</string>
+    <string name="content_description_poster">Imagem do pôster</string>
+
+</resources>

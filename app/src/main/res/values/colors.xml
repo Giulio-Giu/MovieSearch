@@ -5,7 +5,7 @@
     <color name="colorAccent">#E71663</color>
 
     <color name="textGrayUltraLight">#fcfcfc</color>
-    <color name="lightgray">#fafafa</color>
+    <color name="light_gray">#fafafa</color>
     <color name="gray">#b3b3b3</color>
     <color name="dark_gray">#8D8B8B</color>
     <color name="background_gray">#DADADA</color>

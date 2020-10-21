@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView.OnEditorActionListener
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.com.trabalhoomdb.R
@@ -21,9 +20,8 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.*
+import java.util.Locale
 import kotlin.collections.HashSet
-
 
 class HomeFragment : Fragment() {
 
@@ -46,7 +44,6 @@ class HomeFragment : Fragment() {
         tv_home_messageError.visibility = View.INVISIBLE
         constraint_home_result.visibility = View.INVISIBLE
 
-
         val shared = contextActivity.getSharedPreferences(
             getString(R.string.PREF_APP_NAME),
             Context.MODE_PRIVATE
@@ -64,11 +61,16 @@ class HomeFragment : Fragment() {
         } else {
             searchFilm(getString(R.string.home_default_search), true)
         }
+//
+//        if (et_movieSearchHint.text.toString().trim().isNotEmpty()) {
+//            tv_home_messageError.visibility = View.INVISIBLE
+//            searchFilm(et_movieSearchHint.text.toString().trim(), false)
+//        }
 
-        if (et_movieSearchHint.text.toString().trim().isNotEmpty()) {
-            tv_home_messageError.visibility = View.INVISIBLE
-            searchFilm(et_movieSearchHint.text.toString().trim(), false)
-        }
+        createListener()
+    }
+
+    private fun createListener() {
 
         home_btn_search.setOnClickListener {
             callSearchFilm()
@@ -207,7 +209,8 @@ class HomeFragment : Fragment() {
         tv_movie_title.text = film.Title
         tv_movie_imdbRating.text = film.imdbRating
         tv_movie_imdbVotes.text = film.imdbVotes
-        val type = film.Type
+
+        tv_movie_type.text = setInitialCap(film.Type)
         tv_movie_runtime.text = film.Runtime
         tv_movie_released.text = film.Released
         tv_movie_year.text = film.Year
@@ -226,19 +229,17 @@ class HomeFragment : Fragment() {
         tv_movie_awards.text = film.Awards
 
         /**fazer separado o que for só de série e o q for só de filme */
-        if (type.equals("series", ignoreCase = true)) {
-            tv_movie_type.text = "S" + type.substring(1, type.length)
-
+        /**Série*/
+        if (film.Type.equals("series", ignoreCase = true)) {
             group_show_only_series.visibility = View.VISIBLE
             group_show_only_movie.visibility = View.GONE
             group_show_boxOffice.visibility = View.GONE
             group_show_production.visibility = View.GONE
 
-            tv_movie_totalSeasons.text = "${film.totalSeasons} seasons"
+            tv_movie_totalSeasons.text = getString(R.string.seasons_count, film.totalSeasons)
 
         } else {
-            tv_movie_type.text = "M" + type.substring(1, type.length)
-
+            /**Filme*/
             group_show_only_series.visibility = View.GONE
             group_show_only_movie.visibility = View.VISIBLE
 
@@ -254,5 +255,10 @@ class HomeFragment : Fragment() {
                 tv_movie_production.text = film.Production
             }
         }
+    }
+
+    private fun setInitialCap(text: String): String {
+        val aux = text.substring(1, text.length)
+        return text.first().toUpperCase() + aux
     }
 }
