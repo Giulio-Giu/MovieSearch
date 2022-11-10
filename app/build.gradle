@@ -48,6 +48,7 @@ android {
 
 dependencies {
 
+    testImplementation 'junit:junit:4.12'
     def version_jetbrains_jdk7 = '1.6.20'
     def version_core_ktx = "1.7.0"
     def version_app_compat = "1.4.1"
@@ -88,7 +89,6 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$version_junit_ext"
     androidTestImplementation "androidx.test.espresso:espresso-core:$version_espresso_core"
     //endregion
-
 
     //region material dialogs
     implementation "com.afollestad.material-dialogs:core:$version_material_dialogs"

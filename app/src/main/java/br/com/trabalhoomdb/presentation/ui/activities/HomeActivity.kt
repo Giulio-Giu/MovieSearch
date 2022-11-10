@@ -52,7 +52,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, ListenerEvents {
 
     private fun initDependencies(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
-            DIFilmManager().initFilmDependenceInjection(application)
+            DIFilmManager().initFilmDependencyInjection(application)
         }
     }
 

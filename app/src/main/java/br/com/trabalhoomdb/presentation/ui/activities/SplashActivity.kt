@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import br.com.trabalhoomdb.R
 
 class SplashActivity : AppCompatActivity() {
@@ -22,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
 
         shared.edit().putString(getString(R.string.PREF_HISTORIC_SEARCH), null).apply()
 
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             goToHome()
         }, delayMillis)
     }

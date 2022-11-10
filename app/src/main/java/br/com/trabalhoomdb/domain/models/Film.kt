@@ -25,4 +25,4 @@ data class Film(
     var Production: String = "",
     var totalSeasons: String = "",
     var Response: String = ""
-): Parcelable
+) : Parcelable

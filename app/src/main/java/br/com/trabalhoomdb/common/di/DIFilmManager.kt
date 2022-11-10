@@ -9,7 +9,7 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 
 class DIFilmManager {
-    fun initFilmDependenceInjection(context: Application) {
+    fun initFilmDependencyInjection(context: Application) {
         try {
             context.getKoin()
         } catch (e: Exception) {
