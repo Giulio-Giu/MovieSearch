@@ -20,7 +20,7 @@ import com.bumptech.glide.Glide
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.collections.HashSet
 
-class HomeFragment : Fragment() {md
+class HomeFragment : Fragment() {
 
     private var search: String = ""
     private var isInitial: Boolean = false
