@@ -1,7 +1,6 @@
 package br.com.trabalhoomdb.data.datasource.remote.modelresponse
 
 import android.os.Parcelable
-import br.com.trabalhoomdb.domain.models.Rating
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

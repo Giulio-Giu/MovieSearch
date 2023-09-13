@@ -7,7 +7,7 @@ import br.com.trabalhoomdb.domain.usecases.abs.FilmSearchUseCase
 class FilmSearchUseCaseImpl(
     private val filmSearchRepository: FilmSearchRepository
 ) : FilmSearchUseCase {
-    override suspend fun invoke(query: String, apiKey: String) : Film {
+    override suspend fun invoke(query: String, apiKey: String): Film {
         return filmSearchRepository.getFilmSearch(query, apiKey)
     }
 }

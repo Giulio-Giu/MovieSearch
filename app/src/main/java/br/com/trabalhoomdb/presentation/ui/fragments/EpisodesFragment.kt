@@ -50,7 +50,7 @@ class EpisodesFragment : Fragment() {
         viewBinding.fragmentEpisodeRecyclerView.visibility = View.GONE
         (activity as HomeActivity).showHideProgressBar(true)
 
-        listEpisodes(search) // listEpisodes("1")
+        listEpisodes(search)
         viewBinding.etFragmentEpisodeSeasonSearch.setText("1")
     }
 
@@ -64,7 +64,6 @@ class EpisodesFragment : Fragment() {
                 actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH ||
                 actionId == EditorInfo.IME_ACTION_NEXT || actionId == EditorInfo.IME_ACTION_GO
             ) {
-                //do what you want on the press of 'done'
                 callListEpisodes()
                 Keyboard.hideKeyboard(requireView())
             }
@@ -95,7 +94,7 @@ class EpisodesFragment : Fragment() {
     }
 
     private fun callAdapter(episodes: List<Episode>) {
-        val adapter = EpisodesAdapter(/*contextActivity,*/ episodes)
+        val adapter = EpisodesAdapter(episodes)
         viewBinding.fragmentEpisodeRecyclerView.visibility = View.VISIBLE
         viewBinding.fragmentEpisodeRecyclerView.adapter = adapter
     }

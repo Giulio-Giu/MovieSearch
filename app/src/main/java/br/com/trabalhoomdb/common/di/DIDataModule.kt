@@ -14,7 +14,7 @@ class DIDataModule {
         getFilmDataSourceModules()
     )
 
-    fun getServicesModules() = listOf (
+    fun getServicesModules() = listOf(
         getFilmServiceModules()
     )
 }

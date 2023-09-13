@@ -21,7 +21,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, ListenerEvents {
     private lateinit var sharedPreferencesGlobal: SharedPreferences
     private lateinit var viewBinding: ActivityHomeBinding
 
-    //store the value of the last accessed fragment
     private var lastFragment = HomeActivityKeys.HomeFragment.toString()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,9 +33,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, ListenerEvents {
             Context.MODE_PRIVATE
         )
 
-        /** TODO()
-         * Inicializar as depeendências
-         */
         initDependencies(savedInstanceState)
 
         viewBinding = ActivityHomeBinding.inflate(layoutInflater)
@@ -88,14 +84,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, ListenerEvents {
             }
         }
     }
-
-    /** TODO fazer o nav host*/
-
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//        if (supportFragmentManager.backStackEntryCount == 0)
-//            finish()
-//    }
 
     override fun initListeners() {
         viewBinding.toolbar.btnHome.setOnClickListener(this)

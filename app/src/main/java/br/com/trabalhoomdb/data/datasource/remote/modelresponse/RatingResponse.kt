@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class RatingResponse (
+data class RatingResponse(
     var Source: String? = null,
     var Value: String? = null
-): Parcelable
+) : Parcelable

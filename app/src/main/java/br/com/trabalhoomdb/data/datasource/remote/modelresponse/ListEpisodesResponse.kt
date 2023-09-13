@@ -8,4 +8,4 @@ data class ListEpisodesResponse(
     var Season: String? = null,
     var Episodes: List<EpisodeResponse>? = null,
     var Response: String
-): Parcelable
+) : Parcelable

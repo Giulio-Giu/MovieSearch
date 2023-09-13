@@ -18,7 +18,6 @@ import br.com.trabalhoomdb.presentation.ui.activities.HomeActivity
 import br.com.trabalhoomdb.presentation.viewmodels.HomeViewModel
 import com.bumptech.glide.Glide
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import kotlin.collections.HashSet
 
 class HomeFragment : Fragment() {
 
@@ -55,8 +54,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun initView() {
-//        contextActivity = context as HomeActivity
-
         viewBinding.tvHomeMessageError.visibility = View.GONE
         viewBinding.constraintHomeResult.visibility = View.VISIBLE
 
@@ -70,79 +67,18 @@ class HomeFragment : Fragment() {
         if (!historicSearch.isNullOrEmpty()) {
             isInitial = false
             search = historicSearch
-//            viewModel.searchFilm(search, HomeActivity.getApiKey())
-
-            //remover do shared para não fazer a pesquisa depois de sair entrar dnv no app
-//            shared.edit()
-//                .remove(getString(R.string.PREF_HISTORIC_SEARCH))
-//                .apply()
         } else {
             isInitial = true
             search = getString(R.string.home_default_search)
-//            viewModel.searchFilm(search, HomeActivity.getApiKey())
         }
         callSearchFilm(isFromInitView = true)
-//
-//        if (et_movieSearchHint.text.toString().trim().isNotEmpty()) {
-//            tv_home_messageError.visibility = View.INVISIBLE
-//            searchFilm(et_movieSearchHint.text.toString().trim(), false)
-//        }
-
-        // initListeners()
     }
 
     private fun initObservables() {
         viewModel.searchFilmLiveData.observe(
             viewLifecycleOwner
         ) { getItems(it, contextActivity, search) }
-
-//        val ss = contextActivity.getString(R.string.teste, 1, 2)
-//        val ss2 = contextActivity.getString(R.string.teste, "1", "2")
     }
-    /*
-
-
-
-    private fun listEpisodes(season: String) {
-    val e = RetrofitInitializerOmdb(contextActivity).serviceOmdb()
-
-    val call = e.listEpisodes(search, season, apiKey)
-
-    call.enqueue(object : Callback<ListEpisodes> {
-    override fun onResponse(
-    call: Call<ListEpisodes>?,
-    response: Response<ListEpisodes>?
-    ) {
-    response?.let {
-    if (it.body().Response.equals("true", ignoreCase = true)) {
-    tv_fragmentEpisode_messageError.visibility = View.GONE
-    fragmentEpisode_recyclerView.visibility = View.VISIBLE
-    callAdapter(it.body().Episodes)
-    } else {
-    Toast.makeText(
-    contextActivity,
-    resources.getString(R.string.fragmentEpisode_message_error_searchResult),
-    Toast.LENGTH_LONG
-    ).show()
-    tv_fragmentEpisode_messageError.visibility = View.VISIBLE
-    fragmentEpisode_recyclerView.visibility = View.GONE
-    tv_fragmentEpisode_messageError.text =
-    resources.getString(R.string.fragmentEpisode_message_error_searchResult)
-    }
-    }
-    }
-
-    override fun onFailure(call: Call<ListEpisodes>?, t: Throwable?) {
-    Toast.makeText(
-    contextActivity,
-    getString(R.string.fragmentEpisode_message_failure_enqueue),
-    Toast.LENGTH_LONG
-    )
-    .show()
-    }
-    })
-    }
-     */
 
     private fun initListeners() {
         viewBinding.homeBtnSearch.setOnClickListener {
@@ -154,10 +90,8 @@ class HomeFragment : Fragment() {
                 actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH ||
                 actionId == EditorInfo.IME_ACTION_NEXT || actionId == EditorInfo.IME_ACTION_GO
             ) {
-                //do what you want on the press of 'done'
                 callSearchFilm()
                 Keyboard.hideKeyboard(requireView())
-                //(activity as HomeActivity).hideSoftKeyboard(contextActivity)
             }
             false
         }
@@ -171,14 +105,6 @@ class HomeFragment : Fragment() {
         viewBinding.viewMovieEpisodesGuide.setOnClickListener {
             gotoEpisodeGuide()
         }
-
-//        viewBinding.tvMovieTotalSeasons.setOnClickListener {
-//            gotoEpisodeGuide()
-//        }
-//
-//        viewBinding.ibEpisodesArrow.setOnClickListener {
-//            gotoEpisodeGuide()
-//        }
     }
 
     private fun gotoEpisodeGuide() {
@@ -211,9 +137,6 @@ class HomeFragment : Fragment() {
                     visibility = View.VISIBLE
                     text = resources.getString(R.string.home_message_error_searchField)
                 }
-//            viewBinding.tvHomeMessageError.visibility = View.VISIBLE
-//            viewBinding.tvHomeMessageError.text =
-//                resources.getString(R.string.home_message_error_searchField)
             } else {
                 viewBinding.tvHomeMessageError.visibility = View.GONE
                 viewBinding.constraintHomeResult.visibility = View.VISIBLE
@@ -222,7 +145,6 @@ class HomeFragment : Fragment() {
                     viewBinding.etMovieSearchHint.text.toString().trim(),
                     HomeActivity.getApiKey()
                 )
-                //searchFilm(et_movieSearchHint.text.toString().trim(), false)
             }
         }
     }
@@ -296,13 +218,11 @@ class HomeFragment : Fragment() {
 
                 viewBinding.tvMovieDirector.text = film.Director
 
-//            if (film.BoxOffice.toUpperCase(Locale.getDefault()) != "N/A") {
                 if (!film.BoxOffice.equals("N/A", ignoreCase = true)) {
                     viewBinding.groupShowBoxOffice.visibility = View.VISIBLE
                     viewBinding.tvMovieBoxOffice.text = film.BoxOffice
                 }
 
-//            if (film.Production.toUpperCase(Locale.getDefault()) != "N/A") {
                 if (!film.Production.equals("N/A", ignoreCase = true)) {
                     viewBinding.groupShowProduction.visibility = View.VISIBLE
                     viewBinding.tvMovieProduction.text = film.Production

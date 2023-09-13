@@ -9,4 +9,4 @@ data class EpisodeResponse(
     var Released: String? = null,
     var Episode: String? = null,
     var imdbRating: String? = null
-): Parcelable
+) : Parcelable

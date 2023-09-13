@@ -11,8 +11,8 @@ import br.com.trabalhoomdb.domain.usecases.abs.ListEpisodesUseCase
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val filmSearchUseCase : FilmSearchUseCase,
-    private val listEpisodesUseCase : ListEpisodesUseCase
+    private val filmSearchUseCase: FilmSearchUseCase,
+    private val listEpisodesUseCase: ListEpisodesUseCase
 ) : ViewModel() {
 
     private val searchFilmMutableLiveData = MutableLiveData<Film>()
