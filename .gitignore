@@ -21,3 +21,5 @@
 /.idea/shelf/teste.xml
 /.idea/kotlinc.xml
 /.idea
+app/release
+app/debug
